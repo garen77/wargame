@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:c="http://java.sun.com/jstl/core"
+	xmlns:ice="http://www.icesoft.com/icefaces/component"
+	xmlns:wgm="http://www.wg.com/jsf">
+	<f:view>	
+		<c:if test="#{wgm:ifPropertyTrue(html5Libs)}">
+			<ui:include src="/pages/scripts/common/html5/html5Libs.xhtml" />
+		</c:if>
+		<script id="shader-vs" type="x-shader/x-vertex">
+			attribute vec3 aVertexPosition;
+			void main(void) {
+				gl_Position = vec4(aVertexPosition, 1.0);
+			}
+		</script>
+		<script id="shader-fs" type="x-shader/x-fragment">
+			void main(void) {
+				gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
+			}
+		</script>
+		<!-- <script type="application/processing" data-processing-target="containerPlayArea" src="/WarGame/skins/js/playArea/playArea.js" />
+		 -->
+		<script type="text/javascript" src="/WarGame/skins/js/playArea/playAreaWebGLStart.js" />
+	</f:view>
+</ui:composition>	

@@ -1,0 +1,38 @@
+.col70{
+	width: 70px;
+}
+.col100{
+	width: 100px;
+}
+.col150{
+	width: 150px;
+}
+.col350{
+	width: 350px;
+}
+.row70{
+	height: 70px;
+}
+.row40{
+	height: 40px;	
+}
+
+.colorRed{
+	color: red;
+}
+
+.columnTitle{
+	font-size: 18px;
+	font-weight: bold;
+	color: black;
+}
+
+.cellContent{
+	font-size: 15px;
+	color: blue;
+}
+.body{
+	background-image: url("../img/zucca.gif");
+	background-repeat: repeat;	
+}
+

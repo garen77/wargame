@@ -1,0 +1,10 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ice="http://www.icesoft.com/icefaces/component"
+	xmlns:wgm="http://www.wg.com/jsf">
+
+		<h1 align="center"><ice:outputText value="#{wgm:isNullOrEmpty(title) ? msg.headerTitle : title}" /></h1>
+	
+</ui:composition>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>WarGame</display-name>
+	<welcome-file-list>
+		<welcome-file>index.xhtml</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+  <context-param>
+    <param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
+    <param-value>resources.application</param-value>
+  </context-param>
+  <context-param>
+  	<param-name>facelets.LIBRARIES</param-name>
+  	<param-value>/WEB-INF/wg.taglib.xml</param-value>
+  </context-param>
+  <context-param>
+    <param-name>javax.faces.DEFAULT_SUFFIX</param-name>
+    <param-value>.xhtml</param-value>
+  </context-param>
+  <context-param>
+    <description>To allow multiple windows for a single application.</description>
+    <param-name>com.icesoft.faces.concurrentDOMViews</param-name>
+    <param-value>false</param-value>
+  </context-param>
+  <context-param>
+    <description>Turn on/off application-wide synchronous or asynchronous updates.	</description>
+    <param-name>com.icesoft.faces.synchronousUpdate</param-name>
+    <param-value>false</param-value>
+  </context-param>
+  <context-param>
+    <description>Google Maps API key is required if gMap component is used. Sign up for an API key from http://code.google.com/apis/maps/signup.html</description>
+    <param-name>com.icesoft.faces.gmapKey</param-name>
+    <param-value>ABQIAAAADlu0ZiSTam64EKaCQr9eTRTOTuQNzJNXRlYRLknj4cQ89tFfpxTEqxQnVWL4k55OPICgF5_SOZE06A</param-value>
+  </context-param>
+  <context-param>
+    <param-name>com.icesoft.faces.uploadDirectory</param-name>
+    <param-value>upload</param-value>
+  </context-param>
+  <context-param>
+    <param-name>com.icesoft.faces.uploadMaxFileSize</param-name>
+    <param-value>4048576</param-value>
+  </context-param>
+  <context-param>
+    <description>beans.xml</description>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>/WEB-INF/beans-web.xml</param-value>
+  </context-param>
+  <context-param>
+    <description>Monitor Runner Interval parameter</description>
+    <param-name>monitorRunnerInterval</param-name>
+    <param-value>1000</param-value>
+  </context-param>
+
+  <servlet>
+    <servlet-name>Faces Servlet</servlet-name>
+    <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet>
+    <servlet-name>Persistent Faces Servlet</servlet-name>
+    <servlet-class>com.icesoft.faces.webapp.xmlhttp.PersistentFacesServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet>
+    <servlet-name>Blocking Servlet</servlet-name>
+    <servlet-class>com.icesoft.faces.webapp.xmlhttp.BlockingServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet>
+    <servlet-name>uploadServlet</servlet-name>
+    <servlet-class>com.icesoft.faces.component.inputfile.FileUploadServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+    <servlet>
+        <servlet-name>Jersey Web Application</servlet-name>
+        <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+		<init-param>
+			<param-name>javax.ws.rs.core.Application</param-name>
+			<param-value>com.wg.rest.application.WarGameApplication</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>    
+	</servlet>
+  <servlet-mapping>
+    <servlet-name>Persistent Faces Servlet</servlet-name>
+    <url-pattern>*.iface</url-pattern>
+    <url-pattern>*.jspx</url-pattern>
+    <url-pattern>/xmlhttp/* </url-pattern>
+    <url-pattern>*.faces</url-pattern>
+    <url-pattern>*.jsf</url-pattern>
+    <url-pattern>/faces/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Blocking Servlet</servlet-name>
+    <url-pattern>/block/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>uploadServlet</servlet-name>
+    <url-pattern>/uploadHtml</url-pattern>
+  </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Jersey Web Application</servlet-name>
+        <url-pattern>/rest/*</url-pattern>
+    </servlet-mapping>  
+  <listener>
+    <listener-class>com.icesoft.faces.util.event.servlet.ContextEventRepeater</listener-class>
+  </listener>
+  <listener>
+    <listener-class>com.sun.faces.application.WebappLifecycleListener</listener-class>
+  </listener>
+  <listener>
+    <listener-class>com.sun.faces.config.ConfigureListener</listener-class>
+  </listener>
+  <listener>
+          <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+  </listener>
+  <listener>
+          <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+
+
+</web-app>

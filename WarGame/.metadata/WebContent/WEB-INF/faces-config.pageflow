@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14075903525470" configfile="/WarGame/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="pages/start.xhtml" id="pf14075988004691" referenceLink="//@navigationRule.3/@navigationCase.0/@toViewId|" outlinks="pf14079211678381 pf14088055090120 pf14095023076440" inlinks="pf14079632778930 pf14087404051010 pf14099540837630" path="/pages/start.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="pagesfailureLogin.xhtml" id="pf14079211678382" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf14079632778930" inlinks="pf14079211678381" path="/pages/failureLogin.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="register.xhtml" id="pf14087404051111" referenceLink="//@navigationRule.3/@fromViewId|" outlinks="pf14087404051010" inlinks="pf14088055090120" path="/pages/register.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="home.xhtml" id="pf14095023076441" referenceLink="//@navigationRule.3/@fromViewId|" outlinks="pf14099540837630" inlinks="pf14095023076440" path="/pages/home.xhtml"/>
+  <links id="pf14079211678381" target="pf14079211678382" source="pf14075988004691" outcome="failure"/>
+  <links id="pf14079632778930" target="pf14075988004691" source="pf14079211678382" outcome="back"/>
+  <links id="pf14087404051010" target="pf14075988004691" source="pf14087404051111" outcome="back"/>
+  <links id="pf14088055090120" target="pf14087404051111" source="pf14075988004691" outcome="register"/>
+  <links id="pf14095023076440" target="pf14095023076441" source="pf14075988004691" outcome="successful"/>
+  <links id="pf14099540837630" target="pf14075988004691" source="pf14095023076441" outcome="back"/>
+</pageflow:Pageflow>

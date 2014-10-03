@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:c="http://java.sun.com/jstl/core"
+	xmlns:ice="http://www.icesoft.com/icefaces/component"
+	xmlns:wgm="http://www.wg.com/jsf">
+	<f:view>	
+		<script type="text/template" id="userTemplate">
+		    <div>
+				<table id="tableUser">
+					<tr>
+						<td>
+							<table>
+								<tr><td align="center"> <img src="{{= characterImg }}" /></td></tr>
+							</table>
+						</td>
+						<td align="center">
+							<table id="tableUserFeatures">
+								{{ _.each(featuresImg,function(feat){ }}
+								<tr><td align="center"><img src="{{= feat  }}" /> </td></tr>
+								{{ });  }}
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td align="center" colspan="2"><b><font size="7"> {{= userName }}</font></b></td>					
+					</tr>
+				</table>
+			</div>
+		</script>
+		<c:if test="#{wgm:ifPropertyTrue(backboneLibs)}">
+			<ui:include src="/pages/scripts/common/backbone/backboneLibs.xhtml" />
+		</c:if>				
+		<script src="/WarGame/skins/js/home/Model.js" />
+		<script src="/WarGame/skins/js/home/View.js" />
+		<script src="/WarGame/skins/js/home/home.js" />
+	</f:view>
+</ui:composition>	

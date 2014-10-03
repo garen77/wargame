@@ -1,0 +1,18 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+				xmlns:ui="http://java.sun.com/jsf/facelets"
+				xmlns:f="http://java.sun.com/jsf/core"
+				xmlns:h="http://java.sun.com/jsf/html"
+				xmlns:c="http://java.sun.com/jstl/core"
+				xmlns:ice="http://www.icesoft.com/icefaces/component">
+				<div>
+             <ice:form>
+             	<h:outputLabel value="content"></h:outputLabel> 
+                <ice:selectOneMenu value="#{warGameLoaderBean.selectedCharacter}">
+                	<f:selectItems value="#{warGameLoaderBean.chars}" />
+                </ice:selectOneMenu>
+             <!-- 
+             drop ICEfaces components here
+             -->
+             </ice:form>
+             </div>
+</ui:composition>

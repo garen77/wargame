@@ -1,0 +1,43 @@
+<wgm:view xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:c="http://java.sun.com/jstl/core"
+	xmlns:ice="http://www.icesoft.com/icefaces/component"
+	xmlns:wgm="http://www.wg.com/jsf"
+	backingBean="#{warGameLoaderBean}">
+		
+	<div align="center">
+		<ice:panelGroup id="registerView" rendered="#{callerBean.viewState.view == 'register'}">
+			<ice:outputText value="#{msg.registration}"/>
+			<ice:panelGrid cellSpacing="0" columns="3" columnClasses="col1, col2, col3">
+				<ice:outputText id="userNameLabel" value="#{msg.userName}"></ice:outputText>
+				<ice:inputText id="userNameText" value="#{callerBean.userName}"></ice:inputText>
+				<ice:outputText id="userNameMess" value=""></ice:outputText>
+				
+				<ice:outputText id="passwordLabel" value="#{msg.password}"></ice:outputText>
+				<ice:inputText id="passwordText" value="#{callerBean.password}"></ice:inputText>
+				<ice:outputText id="passwordMess" value=""></ice:outputText>
+	
+				<ice:outputText id="mailLabel" forceId="true" value="#{msg.mail}"></ice:outputText>
+				<ice:inputText id="mailText" value="#{callerBean.mail}"></ice:inputText>
+				<ice:outputText id="mailMess" value=""></ice:outputText>
+				
+			</ice:panelGrid>
+			<h:commandButton  id="registerButton" type="submit" 
+				action="#{callerBean.register}" value="#{msg.register}" />
+		</ice:panelGroup>
+		<ice:panelGroup id="registerOkView" rendered="#{callerBean.viewState.view == 'registerOk'}">
+			<ice:outputLabel styleClass="bigText" value="#{msg.registrationOk}" />
+		</ice:panelGroup>
+		<ice:panelGroup id="registerFailureView" rendered="#{callerBean.viewState.view == 'registerFailure'}">
+			<ice:dataTable value="#{callerBean.errorMessages}" var="err">
+				<ice:column>
+					<ice:outputText value="#{err}"/>
+				</ice:column>
+			</ice:dataTable>
+		</ice:panelGroup>
+		<ice:commandButton type="submit" action="#{callerBean.back}" value="Back" />
+	</div>
+
+</wgm:view>
