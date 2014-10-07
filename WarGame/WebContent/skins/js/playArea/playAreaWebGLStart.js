@@ -79,13 +79,13 @@ function makeShader(src, type)
 function setupBuffers(){
 	var triangleVertices = [
 		//left triangle
-		-0.5, 0.5, 0.0,
+		-0.9, 0.9, 0.0,
 		0.0, 0.0, 0.0,
 		-0.5, -0.5, 0.0,
 		//right triangle
 		0.5, 0.5, 0.0,
 		0.0, 0.0, 0.0,
-		0.5, -0.5, 0.0
+		0.3, -0.3, 0.0
 	];
 	trianglesVerticeBuffer = gl.createBuffer();
 	gl.bindBuffer(gl.ARRAY_BUFFER, trianglesVerticeBuffer);
