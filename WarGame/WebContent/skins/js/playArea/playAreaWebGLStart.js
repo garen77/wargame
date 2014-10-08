@@ -50,8 +50,26 @@ function setupWebGL()
 }
 function initShaders(){
 	
-	var vs_source = $('#shader-vs').html(),
-		fs_source = $('#shader-fs').html();
+	var vs_source = null,//$('#shader-vs').html(),
+		fs_source = null; //$('#shader-fs').html();
+
+	$.ajax({
+		async: false,
+		url: '/WarGame/pages/scripts/playArea/shader.vs',
+		success: function (data) {
+		vs_source = data.firstChild.textContent;
+		},
+		dataType: 'xml'
+		});
+
+	$.ajax({
+		async: false,
+		url: '/WarGame/pages/scripts/playArea/shader.fs',
+		success: function (data) {
+			fs_source = data.firstChild.textContent;
+		},
+		dataType: 'xml'
+		});
 
 	var vertexShader = makeShader(vs_source,gl.VERTEX_SHADER); //gl.createShader(gl.VERTEX_SHADER);
 	var fragmentShader = makeShader(fs_source,gl.FRAGMENT_SHADER); //gl.createShader(gl.FRAGMENT_SHADER);
