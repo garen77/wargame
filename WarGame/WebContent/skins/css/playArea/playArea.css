@@ -1,0 +1,16 @@
+#playAreaTitle {
+	transition-duration: 1s;
+	-ms-transform: translate(10px,0); /* IE 9 */
+    -webkit-transform: translate(10px,0); /* Chrome, Safari, Opera */
+    transform: translate(10px,0);
+	color: red;
+}
+
+#playAreaTitle:hover {
+	-ms-transform: translate(-10px,0); /* IE 9 */
+    -webkit-transform: translate(-10px,0); /* Chrome, Safari, Opera */
+    transform: translate(-10px,0);
+	color: green;
+	cursor:url(/WarGame/skins/img/cursors/MilitaryIcon.png),auto;
+	/* transition-duration: 1s; is found through by inherence */
+}
