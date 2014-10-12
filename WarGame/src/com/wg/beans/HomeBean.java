@@ -28,4 +28,9 @@ public class HomeBean extends BaseBean {
 	{
 		return "playArea";
 	}
+
+	public String play3D()
+	{
+		return "playArea3D";
+	}
 }
