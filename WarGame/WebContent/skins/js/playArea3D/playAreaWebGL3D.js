@@ -69,28 +69,35 @@ var LIBS={
 };
 
 var gl = null,
-canvas = null,
-glProgram = null,
-fragmentShader = null,
-vertexShader = null;
+	canvas = null,
+	glProgram = null,
+	fragmentShader = null,
+	vertexShader = null,
+	_color = null,
+	_position = null;
+
 var vertexPositionAttribute = null,
 	trianglesVerticeBuffer = null,
 	trianglesFacesBuffers = null,
 	_Pmatrix = null,
 	_Vmatrix = null,
 	_Mmatrix = null,
-	PROJMATRIX=LIBS.get_projection(40, canvas.width/canvas.height, 1, 100),
-	MOVEMATRIX=LIBS.get_I4(),
-	VIEWMATRIX=LIBS.get_I4();
+	PROJMATRIX=null,
+	MOVEMATRIX=null,
+	VIEWMATRIX=null;
 
-LIBS.translateZ(VIEWMATRIX, -5);
+
 
 var time_old=0;
 
 $(document).ready(function(){
 	canvas = document.getElementById('containerPlayArea');
+	PROJMATRIX=LIBS.get_projection(40, canvas.width/canvas.height, 1, 100),
+	MOVEMATRIX=LIBS.get_I4(),
+	VIEWMATRIX=LIBS.get_I4();
+	LIBS.translateZ(VIEWMATRIX, -5);	
 	initWebGL(canvas);
-	
+	animate(0);
 
 });
 
@@ -106,7 +113,7 @@ function initWebGL(canvas) {
     	setupWebGL();
     	initShaders();
     	setupBuffers();
-    	animate(0);
+    	
     }else{
     	alert( "Error: Your browser does not appear to" +
     	"support WebGL.");
@@ -170,8 +177,8 @@ function initShaders(){
 	_Vmatrix = gl.getUniformLocation(glProgram, "Vmatrix");
 	_Mmatrix = gl.getUniformLocation(glProgram, "Mmatrix");
 
-	var _color = GL.getAttribLocation(glProgram, "color");
-	var _position = GL.getAttribLocation(glProgram, "position");
+	_color = gl.getAttribLocation(glProgram, "color");
+	_position = gl.getAttribLocation(glProgram, "position");
 
 	gl.enableVertexAttribArray(_color);
 	gl.enableVertexAttribArray(_position);
