@@ -23,7 +23,14 @@ var LIBS={
 			        0,0,0,1];
 		},
 
-		rotateX: function(m, angle) {
+	  set_I4: function(m) {
+		    m[0]=1, m[1]=0, m[2]=0, m[3]=0,
+		      m[4]=0, m[5]=1, m[6]=0, m[7]=0,
+		      m[8]=0, m[9]=0, m[10]=1, m[11]=0,
+		      m[12]=0, m[13]=0, m[14]=0, m[15]=1;
+		  },
+
+		  rotateX: function(m, angle) {
 			var c=Math.cos(angle);
 			var s=Math.sin(angle);
 			var mv1=m[1], mv5=m[5], mv9=m[9];
@@ -88,10 +95,46 @@ var vertexPositionAttribute = null,
 
 
 
-var time_old=0;
+var time_old=0,
+	theta=0,
+	phi=0;
+
+var amortization = 0.95;
+var drag=false;
+
+var dX=0, dY=0;
+
+var old_x, old_y;
+
+var mouseDown=function(e) {
+	drag=true;
+	old_x=e.pageX, old_y=e.pageY;
+	e.preventDefault();
+	return false;
+};
+
+var mouseUp=function(e){
+	drag=false;
+};
+
+var mouseMove=function(e) {
+	if (!drag) return false;
+    dX=(e.pageX-old_x)*2*Math.PI/canvas.width,
+    dY=(e.pageY-old_y)*2*Math.PI/canvas.height;
+    theta+=dX;
+    phi+=dY;
+	old_x=e.pageX, old_y=e.pageY;
+	e.preventDefault();
+};
 
 $(document).ready(function(){
 	canvas = document.getElementById('containerPlayArea');
+	
+	canvas.addEventListener("mousedown", mouseDown, false);
+	canvas.addEventListener("mouseup", mouseUp, false);
+	canvas.addEventListener("mouseout", mouseUp, false);
+	canvas.addEventListener("mousemove", mouseMove, false);
+
 	PROJMATRIX=LIBS.get_projection(40, canvas.width/canvas.height, 1, 100),
 	MOVEMATRIX=LIBS.get_I4(),
 	VIEWMATRIX=LIBS.get_I4();
@@ -263,9 +306,13 @@ function setupBuffers(){
 var animate=function(time) {
 
     var dt=time-time_old;
-    LIBS.rotateZ(MOVEMATRIX, dt*0.005);
-    LIBS.rotateY(MOVEMATRIX, dt*0.004);
-    LIBS.rotateX(MOVEMATRIX, dt*0.003);
+    if (!drag) {
+        dX*=amortization, dY*=amortization;
+        theta+=dX, phi+=dY;
+    }
+    LIBS.set_I4(MOVEMATRIX);
+    LIBS.rotateY(MOVEMATRIX,theta);
+    LIBS.rotateX(MOVEMATRIX,phi);
     time_old=time;
 
 	gl.viewport(0.0, 0.0, canvas.width, canvas.height);
