@@ -77,8 +77,8 @@ var gl = null,
 	_position = null;
 
 var vertexPositionAttribute = null,
-	trianglesVerticeBuffer = null,
-	trianglesFacesBuffers = null,
+	cubeVerticeBuffer = null,
+	cubeFacesBuffers = null,
 	_Pmatrix = null,
 	_Vmatrix = null,
 	_Mmatrix = null,
@@ -95,7 +95,7 @@ $(document).ready(function(){
 	PROJMATRIX=LIBS.get_projection(40, canvas.width/canvas.height, 1, 100),
 	MOVEMATRIX=LIBS.get_I4(),
 	VIEWMATRIX=LIBS.get_I4();
-	LIBS.translateZ(VIEWMATRIX, -5);	
+	LIBS.translateZ(VIEWMATRIX, -6);	
 	initWebGL(canvas);
 	animate(0);
 
@@ -199,23 +199,64 @@ function makeShader(src, type)
 }
 
 function setupBuffers(){
-	var triangleVertices = [
-        -1,-1,0,
-        0,0,1,
-        1,-1,0,
-        1,1,0,
-        1,1,0,
-        1,0,0
-	];
-	trianglesVerticeBuffer = gl.createBuffer();
-	gl.bindBuffer(gl.ARRAY_BUFFER, trianglesVerticeBuffer);
-	gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(triangleVertices), gl.STATIC_DRAW);
+	var cubeVertices = [
+	                    -1,-1,-1,     1,1,0,
+	                    1,-1,-1,     1,1,0,
+	                    1, 1,-1,     1,1,0,
+	                    -1, 1,-1,     1,1,0,
+
+	                    -1,-1, 1,     0,0,1,
+	                    1,-1, 1,     0,0,1,
+	                    1, 1, 1,     0,0,1,
+	                    -1, 1, 1,     0,0,1,
+
+	                    -1,-1,-1,     0,1,1,
+	                    -1, 1,-1,     0,1,1,
+	                    -1, 1, 1,     0,1,1,
+	                    -1,-1, 1,     0,1,1,
+
+	                    1,-1,-1,     1,0,0,
+	                    1, 1,-1,     1,0,0,
+	                    1, 1, 1,     1,0,0,
+	                    1,-1, 1,     1,0,0,
+
+	                    -1,-1,-1,     1,0,1,
+	                    -1,-1, 1,     1,0,1,
+	                    1,-1, 1,     1,0,1,
+	                    1,-1,-1,     1,0,1,
+
+	                    -1, 1,-1,     0,1,0,
+	                    -1, 1, 1,     0,1,0,
+	                    1, 1, 1,     0,1,0,
+	                    1, 1,-1,     0,1,0
+     ];
+	cubeVerticeBuffer = gl.createBuffer();
+	gl.bindBuffer(gl.ARRAY_BUFFER, cubeVerticeBuffer);
+	gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(cubeVertices), gl.STATIC_DRAW);
 	
 	//FACES :
-	var triangle_faces = [0,1,2];
-	trianglesFacesBuffers = gl.createBuffer ();
-	gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, trianglesFacesBuffers);
-	gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,new Uint16Array(triangle_faces),gl.STATIC_DRAW);	
+	var cube_faces = [
+	                  0,1,2,
+	                  0,2,3,
+
+	                  4,5,6,
+	                  4,6,7,
+
+	                  8,9,10,
+	                  8,10,11,
+
+	                  12,13,14,
+	                  12,14,15,
+
+	                  16,17,18,
+	                  16,18,19,
+
+	                  20,21,22,
+	                  20,22,23
+	];
+	cubeFacesBuffers = gl.createBuffer ();
+	gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, cubeFacesBuffers);
+	gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,new Uint16Array(cube_faces),gl.STATIC_DRAW);	
 }
 
 
@@ -234,9 +275,9 @@ var animate=function(time) {
 	gl.uniformMatrix4fv(_Mmatrix, false, MOVEMATRIX);
 	gl.vertexAttribPointer(_position, 3, gl.FLOAT, false,4*(3+3),0) ;
 	gl.vertexAttribPointer(_color, 3, gl.FLOAT, false,4*(3+3),3*4) ;
-	gl.bindBuffer(gl.ARRAY_BUFFER, trianglesVerticeBuffer);
-	gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, trianglesFacesBuffers);
-	gl.drawElements(gl.TRIANGLES, 3, gl.UNSIGNED_SHORT, 0);
+	gl.bindBuffer(gl.ARRAY_BUFFER, cubeVerticeBuffer);
+	gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, cubeFacesBuffers);
+	gl.drawElements(gl.TRIANGLES, 6*2*3, gl.UNSIGNED_SHORT, 0);
 
 	gl.flush();
 
