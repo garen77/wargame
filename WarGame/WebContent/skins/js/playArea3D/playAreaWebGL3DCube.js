@@ -316,21 +316,25 @@ function setupBuffers(){
 var animate=function(time) {
 
     var dt=time-time_old;
-    if (!drag) {
+    /*if (!drag) {
         dX*=amortization, dY*=amortization;
         theta+=dX, phi+=dY;
-    }
+    }*/
     if(Math.abs(trX)>5)
     {
     	trXSignum=-trX/Math.abs(trX);
+    	theta += (trX-0.01)*trXSignum*2*Math.PI/canvas.width;
     }	
     trX+=0.01*trXSignum;
     
     if(Math.abs(trY)>4)
     {
     	trYSignum=-trY/Math.abs(trY);
+    	phi += (trY-0.02)*trYSignum*2*Math.PI/canvas.height;
     }	
+    
     trY+=0.02*trYSignum;
+    
     
     LIBS.set_I4(MOVEMATRIX);
     LIBS.rotateY(MOVEMATRIX,theta);
