@@ -71,6 +71,14 @@ var LIBS={
 
 		translateZ: function(m, t){
 			m[14]+=t;
+		},
+
+		translateY: function(m, t){
+			m[13]+=t;
+		},
+
+		translateX: function(m, t){
+			m[12]+=t;
 		}
 
 };
@@ -102,7 +110,9 @@ var time_old=0,
 var amortization = 0.95;
 var drag=false;
 
-var dX=0, dY=0;
+var dX=0, dY=0, 
+	trX=0,trXSignum=1,
+	trY=0,trYSignum=1;
 
 var old_x, old_y;
 
@@ -138,7 +148,7 @@ $(document).ready(function(){
 	PROJMATRIX=LIBS.get_projection(40, canvas.width/canvas.height, 1, 100),
 	MOVEMATRIX=LIBS.get_I4(),
 	VIEWMATRIX=LIBS.get_I4();
-	LIBS.translateZ(VIEWMATRIX, -6);	
+	LIBS.translateZ(VIEWMATRIX, -10);	
 	initWebGL(canvas);
 	animate(0);
 
@@ -310,9 +320,23 @@ var animate=function(time) {
         dX*=amortization, dY*=amortization;
         theta+=dX, phi+=dY;
     }
+    if(Math.abs(trX)>5)
+    {
+    	trXSignum=-trX/Math.abs(trX);
+    }	
+    trX+=0.01*trXSignum;
+    
+    if(Math.abs(trY)>4)
+    {
+    	trYSignum=-trY/Math.abs(trY);
+    }	
+    trY+=0.02*trYSignum;
+    
     LIBS.set_I4(MOVEMATRIX);
     LIBS.rotateY(MOVEMATRIX,theta);
     LIBS.rotateX(MOVEMATRIX,phi);
+    LIBS.translateX(MOVEMATRIX,trX);
+    LIBS.translateY(MOVEMATRIX,trY);
     time_old=time;
 
 	gl.viewport(0.0, 0.0, canvas.width, canvas.height);
