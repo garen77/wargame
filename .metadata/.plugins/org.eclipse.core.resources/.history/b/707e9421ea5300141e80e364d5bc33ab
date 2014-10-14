@@ -1,0 +1,27 @@
+<wgm:view xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:c="http://java.sun.com/jstl/core"
+	xmlns:ice="http://www.icesoft.com/icefaces/component"
+	xmlns:wgm="http://www.wg.com/jsf"
+	backingBean="#{warGameLoaderBean}">
+	
+	<div align="center">
+		<ice:inputHidden id="idCurrentUser" value="#{warGameLoaderBean.idCurrentUser}" />
+		<ice:panelGroup id="homeView" rendered="#{callerBean.viewState.view == 'homeStart'}">
+			<h1 id="homeTitle">Welcome War Game</h1>
+			<div id="statusOutput">Loading...</div>
+			<div id="container">Loading...</div>
+			<ice:panelGrid cellSpacing="0" columns="3" columnClasses="col1, col2, col3">
+				<ice:commandButton id="playNow" type="submit" action="#{callerBean.play}" value="Play Now!" />
+				<ice:commandButton id="playNow3D" type="submit" action="#{callerBean.play3D}" value="Play Now 3D!" />
+				<ice:commandButton id="playNowThree" type="submit" action="#{callerBean.playThree}" value="Play Now Three.js!" />
+				<ice:commandButton id="homeBack" type="submit" action="#{callerBean.back}" value="Back" />
+			</ice:panelGrid>
+		</ice:panelGroup>
+	</div>
+	
+	
+	
+</wgm:view>	
