@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE facelet-taglib PUBLIC "-//Sun Microsystems, Inc.//DTD Facelet Taglib 1.0//EN" "facelet-taglib_1_0.dtd">
+<facelet-taglib>
+	<namespace>http://www.wg.com/jsf</namespace>
+	<tag>	
+		<tag-name>decorate</tag-name>
+		<handler-class>com.wg.ui.jsf.Decorate</handler-class>
+	</tag>
+	<tag>
+		<tag-name>view</tag-name>
+		<source>./tags/commons/view.xhtml</source>
+	</tag>
+	<tag>
+		<tag-name>header</tag-name>
+		<component>	
+			<component-type>com.wg.tags.Header</component-type>
+			<renderer-type>com.wg.tags.renderers.HTMLHeaderRenderer</renderer-type>
+		</component>
+	</tag>
+
+<!-- functions -->
+	<function>
+		<function-name>isNullOrEmpty</function-name>
+		<function-class>com.wg.tags.functions.PageFunctions</function-class>
+		<function-signature>boolean isNullOrEmpty(java.lang.String)</function-signature>
+	</function>
+	<function>
+		<function-name>ifEmptyTrue</function-name>
+		<function-class>com.wg.tags.functions.PageFunctions</function-class>
+		<function-signature>boolean ifEmptyTrue(java.lang.String)</function-signature>
+	</function>
+	<function>
+		<function-name>concat</function-name>
+		<function-class>com.wg.tags.functions.PageFunctions</function-class>
+		<function-signature>String concat(java.lang.String, java.lang.String)</function-signature>
+	</function>
+	<function>
+		<function-name>ifPropertyTrue</function-name>
+		<function-class>com.wg.tags.functions.PageFunctions</function-class>
+		<function-signature>boolean ifPropertyTrue(java.lang.String)</function-signature>
+	</function>
+</facelet-taglib>

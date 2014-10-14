@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Tue Oct 14 22:13:01 CEST 2014
+org.eclipse.jst.j2ee.server\:WarGameServices=WEB-INF/lib/WarGameServices.jar
+org.eclipse.jst.j2ee.server\:WarGameDTO=WEB-INF/lib/WarGameDTO.jar

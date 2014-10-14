@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14075903525470" configfile="/WarGame/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="pages/start.xhtml" x="338" y="562" id="pf14075988004691" referenceLink="//@navigationRule.3/@navigationCase.1/@toViewId|" outlinks="pf14079211678381 pf14088055090120 pf14131498292100" inlinks="pf14079632778930 pf14087404051010 pf14099540837630" path="/pages/start.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="pagesfailureLogin.xhtml" x="122" y="178" id="pf14079211678382" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf14079632778930" inlinks="pf14079211678381" path="/pages/failureLogin.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="register.xhtml" x="122" y="562" id="pf14087404051111" referenceLink="//@navigationRule.2/@fromViewId|" outlinks="pf14087404051010" inlinks="pf14088055090120" path="/pages/register.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="home.xhtml" x="122" y="946" id="pf14095023076441" referenceLink="//@navigationRule.3/@fromViewId|" outlinks="pf14099540837630 pf14131498292101 pf14131498292102" path="/pages/home.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="faces/pages/home.xhtml" x="554" y="370" id="pf14131498292103" referenceLink="//@navigationRule.5/@navigationCase.0/@toViewId|" inlinks="pf14131498292100 pf14131498292104 pf14131498292105" path="/faces/pages/home.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="faces/pages/playArea.xhtml" x="338" y="946" id="pf14131498292106" referenceLink="//@navigationRule.3/@navigationCase.1/@toViewId|" inlinks="pf14131498292101" path="/faces/pages/playArea.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="playArea.xhtml" x="338" y="178" id="pf14131498292107" referenceLink="//@navigationRule.5/@fromViewId|" outlinks="pf14131498292104" path="/pages/playArea.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="faces/pages/playArea3D.xhtml" id="pf14131498292108" referenceLink="//@navigationRule.3/@navigationCase.1/@toViewId|" inlinks="pf14131498292102" path="/faces/pages/playArea3D.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="playArea3D.xhtml" id="pf14131498292109" referenceLink="//@navigationRule.5/@fromViewId|" outlinks="pf14131498292105" path="/pages/playArea3D.xhtml"/>
+  <links id="pf14079211678381" target="pf14079211678382" source="pf14075988004691" outcome="failure"/>
+  <links id="pf14079632778930" target="pf14075988004691" source="pf14079211678382" outcome="back"/>
+  <links id="pf14087404051010" target="pf14075988004691" source="pf14087404051111" outcome="back"/>
+  <links id="pf14088055090120" target="pf14087404051111" source="pf14075988004691" outcome="register"/>
+  <links id="pf14099540837630" target="pf14075988004691" source="pf14095023076441" outcome="back"/>
+  <links id="pf14131498292100" target="pf14131498292103" source="pf14075988004691" outcome="successful" redirect="true"/>
+  <links id="pf14131498292101" target="pf14131498292106" source="pf14095023076441" outcome="playArea" redirect="true"/>
+  <links id="pf14131498292104" target="pf14131498292103" source="pf14131498292107" outcome="back" redirect="true"/>
+  <links id="pf14131498292102" target="pf14131498292108" source="pf14095023076441" outcome="playArea3D" redirect="true"/>
+  <links id="pf14131498292105" target="pf14131498292103" source="pf14131498292109" outcome="back" redirect="true"/>
+</pageflow:Pageflow>

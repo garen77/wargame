@@ -33,4 +33,9 @@ public class HomeBean extends BaseBean {
 	{
 		return "playArea3D";
 	}
+	
+	public String playThree()
+	{
+		return "playAreaThree";
+	}
 }

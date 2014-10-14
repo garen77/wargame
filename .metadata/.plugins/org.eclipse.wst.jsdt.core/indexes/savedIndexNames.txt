@@ -1,0 +1,7 @@
+INDEX VERSION 1.122+C:\garofalo\gitRepository\local\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1665056807.index
+1269758769.index
+3555451742.index
+2985464946.index
+1673096463.index
+1568388195.index

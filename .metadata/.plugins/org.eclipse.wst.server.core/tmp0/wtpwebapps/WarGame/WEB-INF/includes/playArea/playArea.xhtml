@@ -1,0 +1,23 @@
+<wgm:view xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:c="http://java.sun.com/jstl/core"
+	xmlns:ice="http://www.icesoft.com/icefaces/component"
+	xmlns:wgm="http://www.wg.com/jsf"
+	backingBean="#{warGameLoaderBean}">
+	
+	<div align="center">
+		<ice:inputHidden id="idCurrentUser" value="#{warGameLoaderBean.idCurrentUser}" />
+		<ice:panelGroup id="playAreaView" rendered="#{callerBean.viewState.view == 'playAreaStart'}">
+			<h1 id="playAreaTitle">Play Area</h1>
+			<canvas id="containerPlayArea" width="400" height="300">Loading...</canvas>
+			<ice:panelGrid cellSpacing="0" columns="2" columnClasses="col1, col2">
+				<ice:commandButton id="homeBack" type="submit" action="#{callerBean.back}" value="Back" />
+			</ice:panelGrid>
+		</ice:panelGroup>
+	</div>
+	
+	
+	
+</wgm:view>	

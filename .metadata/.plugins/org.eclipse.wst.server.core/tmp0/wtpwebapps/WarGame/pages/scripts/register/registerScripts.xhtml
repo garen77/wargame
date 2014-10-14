@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:c="http://java.sun.com/jstl/core"
+	xmlns:ice="http://www.icesoft.com/icefaces/component"
+	xmlns:wgm="http://www.wg.com/jsf">
+	<f:view>	
+		<c:if test="#{wgm:ifPropertyTrue(backboneLibs)}">
+			<ui:include src="/pages/scripts/common/backbone/backboneLibs.xhtml" />
+		</c:if>				
+		<script src="/WarGame/skins/js/register/register.js" />	
+	</f:view>
+</ui:composition>	

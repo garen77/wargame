@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:c="http://java.sun.com/jstl/core"
+	xmlns:ice="http://www.icesoft.com/icefaces/component"
+	xmlns:wgm="http://www.wg.com/jsf">
+	<f:view>		
+		<ice:outputHtml>						
+			<wgm:header title="#{title}">				
+				<c:if test="#{!wgm:isNullOrEmpty(customCSS)}">
+					<style type="text/css">
+						@IMPORT url("#{customCSS}");
+					</style>
+				</c:if>
+				<style type="text/css">
+					@IMPORT url("/WarGame/skins/css/baseCss.css");
+				</style>
+			</wgm:header>
+			<ice:outputBody  onunload="">
+				<div align="center">
+					<ice:panelGrid columns="1" >
+						<ui:insert name="header">
+							<ui:include src="/pages/commons/header.xhtml" />
+						</ui:insert>
+						<ice:panelGrid columns="1">	
+							<ice:form id="pageForm">				
+								<ui:insert />
+							</ice:form>
+						</ice:panelGrid>						
+						<ui:insert name="footer">
+							<ui:include src="/pages/commons/footer.xhtml" />
+						</ui:insert>
+					</ice:panelGrid>	
+				</div>
+				<c:if test="#{!wgm:isNullOrEmpty(customScripts)}">
+					<ui:include src="/pages/scripts/#{customScripts}/#{customScripts}Scripts.xhtml" />
+				</c:if>				
+		</ice:outputBody>
+		</ice:outputHtml>
+	</f:view>
+</ui:composition>
