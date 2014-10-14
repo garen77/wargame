@@ -1,9 +1,20 @@
+
+var scene = null,
+	renderer = null,
+	stats = null,
+	cube = null,
+	camera = null,
+	sphere = null,
+	step=0;
+
 $(function () {
-	var scene = new THREE.Scene();
-	var camera = new THREE.PerspectiveCamera(45
+	
+	
+	scene = new THREE.Scene();
+	camera = new THREE.PerspectiveCamera(45
 			, window.innerWidth / window.innerHeight
 			, 0.1, 1000);
-	var renderer = new THREE.WebGLRenderer();
+	renderer = new THREE.WebGLRenderer();
 	renderer.setClearColorHex(0xEEEEEE,1.0);
 	renderer.setSize(window.innerWidth, window.innerHeight);
 	var axes = new THREE.AxisHelper( 20 );
@@ -22,7 +33,7 @@ $(function () {
 	var cubeGeometry = new THREE.CubeGeometry(4,4,4);
 	var cubeMaterial = new THREE.MeshLambertMaterial(
 			{color: 0xff0000});
-	var cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
+	cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
 	cube.position.x = -4;
 	cube.position.y = 3;
 	cube.position.z = 0;
@@ -31,7 +42,7 @@ $(function () {
 	var sphereGeometry = new THREE.SphereGeometry(4,20,20);
 	var sphereMaterial = new THREE.MeshLambertMaterial(
 			{color: 0x7777ff});
-	var sphere = new THREE.Mesh(sphereGeometry,sphereMaterial);
+	sphere = new THREE.Mesh(sphereGeometry,sphereMaterial);
 	sphere.position.x = 20;
 	sphere.position.y = 4;
 	sphere.position.z = 2;
@@ -50,4 +61,31 @@ $(function () {
 	
 	$("#containerPlayArea").append(renderer.domElement);
 	renderer.render(scene, camera);
+	
+	renderScene();
 });
+
+function initStats() {
+	var stats = new Stats();
+	stats.setMode(0);
+	stats.domElement.style.position = 'absolute';
+	stats.domElement.style.left = '0px';
+	stats.domElement.style.top = '0px';
+	$("#statusOutput").append( stats.domElement );
+	return stats;
+}
+
+function renderScene()
+{
+	cube.rotation.x += 0.02;
+	cube.rotation.y += 0.02;
+	cube.rotation.z += 0.02;
+	
+	step+=0.04;
+	sphere.position.x = 20+( 10*(Math.cos(step)));
+	sphere.position.y = 2 +( 10*Math.abs(Math.sin(step)));
+	
+//	stats.update();
+	requestAnimationFrame(renderScene);
+	renderer.render(scene, camera);
+}
