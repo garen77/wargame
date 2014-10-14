@@ -5,15 +5,8 @@ var scene = null,
 	cube = null,
 	camera = null,
 	sphere = null,
-	step=0,
-	controls = new function() {
-		this.rotationSpeed = 0.02;
-		this.bouncingSpeed = 0.03;
-		};
+	step=0;
 
-var gui = new dat.GUI();
-		gui.add(controls, 'rotationSpeed',0,0.5);
-		gui.add(controls, 'bouncingSpeed',0,0.5);
 $(function () {
 	
 	
@@ -84,11 +77,11 @@ function initStats() {
 
 function renderScene()
 {
-	cube.rotation.x += controls.rotationSpeed;
-	cube.rotation.y += controls.rotationSpeed;
-	cube.rotation.z += controls.rotationSpeed;
+	cube.rotation.x += 0.02;
+	cube.rotation.y += 0.02;
+	cube.rotation.z += 0.02;
 	
-	step+=controls.bouncingSpeed;
+	step+=0.04;
 	sphere.position.x = 20+( 10*(Math.cos(step)));
 	sphere.position.y = 2 +( 10*Math.abs(Math.sin(step)));
 	

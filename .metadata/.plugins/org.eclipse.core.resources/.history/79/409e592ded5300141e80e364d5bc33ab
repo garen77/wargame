@@ -11,9 +11,6 @@ var scene = null,
 		this.bouncingSpeed = 0.03;
 		};
 
-var gui = new dat.GUI();
-		gui.add(controls, 'rotationSpeed',0,0.5);
-		gui.add(controls, 'bouncingSpeed',0,0.5);
 $(function () {
 	
 	
