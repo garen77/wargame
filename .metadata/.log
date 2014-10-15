@@ -1871,3 +1871,4485 @@ java.lang.NullPointerException
 !MESSAGE error during type inferencing
 !STACK 0
 java.lang.NullPointerException
+!SESSION 2014-10-15 21:09:22.155 -----------------------------------------------
+eclipse.buildId=M20130204-1200
+java.version=1.7.0_17
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=it_IT
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2014-10-15 21:10:26.235
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2014-10-15 21:10:26.235
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@5cbef3b0,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.MakeHandlersGo@7c70d761,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:10:52.270
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.wst.jsdt.core.infer.InferredAttribute.<init>(InferredAttribute.java:59)
+	at org.eclipse.wst.jsdt.core.infer.InferredType.addAttribute(InferredType.java:125)
+	at org.eclipse.wst.jsdt.core.infer.InferEngine.populateType(InferEngine.java:1327)
+	at org.eclipse.wst.jsdt.core.infer.InferEngine.handlePotentialType(InferEngine.java:925)
+	at org.eclipse.wst.jsdt.core.infer.InferEngine.visit(InferEngine.java:328)
+	at org.eclipse.wst.jsdt.internal.compiler.DelegateASTVisitor.visit(DelegateASTVisitor.java:526)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.Assignment.traverse(Assignment.java:224)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.CompilationUnitDeclaration.traverse(CompilationUnitDeclaration.java:584)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.CompilationUnitDeclaration.traverse(CompilationUnitDeclaration.java:539)
+	at org.eclipse.wst.jsdt.core.infer.InferEngine.doInfer(InferEngine.java:1772)
+	at org.eclipse.wst.jsdt.internal.compiler.parser.Parser.inferTypes(Parser.java:7093)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnitProblemFinder.accept(CompilationUnitProblemFinder.java:167)
+	at org.eclipse.wst.jsdt.internal.compiler.lookup.LookupEnvironment.askForBinding(LookupEnvironment.java:279)
+	at org.eclipse.wst.jsdt.internal.compiler.lookup.PackageBinding.getTypeOrPackage(PackageBinding.java:249)
+	at org.eclipse.wst.jsdt.internal.compiler.lookup.Scope.getTypeOrPackage(Scope.java:2105)
+	at org.eclipse.wst.jsdt.internal.compiler.lookup.Scope.getBinding(Scope.java:1088)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.SingleNameReference.findBinding(SingleNameReference.java:478)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.SingleNameReference.resolveType(SingleNameReference.java:374)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.SingleNameReference.resolveType(SingleNameReference.java:366)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.FieldReference.resolveForAllocation(FieldReference.java:514)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.AllocationExpression.resolveType(AllocationExpression.java:120)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.Assignment.resolveType(Assignment.java:160)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.Expression.resolve(Expression.java:477)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.AbstractMethodDeclaration.resolveStatements(AbstractMethodDeclaration.java:350)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.MethodDeclaration.resolveStatements(MethodDeclaration.java:137)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.AbstractMethodDeclaration.resolve(AbstractMethodDeclaration.java:304)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.AbstractMethodDeclaration.resolve(AbstractMethodDeclaration.java:375)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.FunctionExpression.resolveType(FunctionExpression.java:58)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.MessageSend.resolveType(MessageSend.java:279)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.Expression.resolve(Expression.java:477)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.CompilationUnitDeclaration.resolve(CompilationUnitDeclaration.java:394)
+	at org.eclipse.wst.jsdt.internal.compiler.Compiler.resolve(Compiler.java:667)
+	at org.eclipse.wst.jsdt.internal.compiler.Compiler.resolve(Compiler.java:709)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:262)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:334)
+	at org.eclipse.wst.jsdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:197)
+	at org.eclipse.wst.jsdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:96)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:742)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:802)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1202)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:95)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:76)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy.initialReconcile(JavaReconcilingStrategy.java:170)
+	at org.eclipse.wst.jsdt.internal.ui.text.CompositeReconcilingStrategy.initialReconcile(CompositeReconcilingStrategy.java:113)
+	at org.eclipse.wst.jsdt.internal.ui.text.JavaCompositeReconcilingStrategy.initialReconcile(JavaCompositeReconcilingStrategy.java:120)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.initialProcess(MonoReconciler.java:105)
+	at org.eclipse.wst.jsdt.internal.ui.text.JavaReconciler.initialProcess(JavaReconciler.java:360)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:173)
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-10-15 21:10:57.549
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-10-15 21:10:57.559
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Admin'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:23:58.784
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.wst.jsdt.core.infer.InferredAttribute.<init>(InferredAttribute.java:59)
+	at org.eclipse.wst.jsdt.core.infer.InferredType.addAttribute(InferredType.java:125)
+	at org.eclipse.wst.jsdt.core.infer.InferEngine.populateType(InferEngine.java:1327)
+	at org.eclipse.wst.jsdt.core.infer.InferEngine.handlePotentialType(InferEngine.java:925)
+	at org.eclipse.wst.jsdt.core.infer.InferEngine.visit(InferEngine.java:328)
+	at org.eclipse.wst.jsdt.internal.compiler.DelegateASTVisitor.visit(DelegateASTVisitor.java:526)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.Assignment.traverse(Assignment.java:224)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.CompilationUnitDeclaration.traverse(CompilationUnitDeclaration.java:584)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.CompilationUnitDeclaration.traverse(CompilationUnitDeclaration.java:539)
+	at org.eclipse.wst.jsdt.core.infer.InferEngine.doInfer(InferEngine.java:1772)
+	at org.eclipse.wst.jsdt.internal.compiler.parser.Parser.inferTypes(Parser.java:7093)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnitProblemFinder.accept(CompilationUnitProblemFinder.java:167)
+	at org.eclipse.wst.jsdt.internal.compiler.lookup.LookupEnvironment.askForBinding(LookupEnvironment.java:279)
+	at org.eclipse.wst.jsdt.internal.compiler.lookup.PackageBinding.getTypeOrPackage(PackageBinding.java:249)
+	at org.eclipse.wst.jsdt.internal.compiler.lookup.Scope.getTypeOrPackage(Scope.java:2105)
+	at org.eclipse.wst.jsdt.internal.compiler.lookup.Scope.getBinding(Scope.java:1088)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.SingleNameReference.findBinding(SingleNameReference.java:478)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.SingleNameReference.resolveType(SingleNameReference.java:374)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.SingleNameReference.resolveType(SingleNameReference.java:366)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.FieldReference.resolveForAllocation(FieldReference.java:514)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.AllocationExpression.resolveType(AllocationExpression.java:120)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.Assignment.resolveType(Assignment.java:160)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.Expression.resolve(Expression.java:477)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.AbstractMethodDeclaration.resolveStatements(AbstractMethodDeclaration.java:350)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.MethodDeclaration.resolveStatements(MethodDeclaration.java:137)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.AbstractMethodDeclaration.resolve(AbstractMethodDeclaration.java:304)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.AbstractMethodDeclaration.resolve(AbstractMethodDeclaration.java:375)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.FunctionExpression.resolveType(FunctionExpression.java:58)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.MessageSend.resolveType(MessageSend.java:279)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.Expression.resolve(Expression.java:477)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.CompilationUnitDeclaration.resolve(CompilationUnitDeclaration.java:394)
+	at org.eclipse.wst.jsdt.internal.compiler.Compiler.resolve(Compiler.java:667)
+	at org.eclipse.wst.jsdt.internal.compiler.Compiler.resolve(Compiler.java:709)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:262)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:334)
+	at org.eclipse.wst.jsdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:197)
+	at org.eclipse.wst.jsdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:96)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:742)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:802)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1202)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:95)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:76)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:143)
+	at org.eclipse.wst.jsdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:85)
+	at org.eclipse.wst.jsdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:94)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
+	at org.eclipse.wst.jsdt.internal.ui.text.JavaReconciler.process(JavaReconciler.java:371)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:23:59.274
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.wst.jsdt.core.infer.InferredAttribute.<init>(InferredAttribute.java:59)
+	at org.eclipse.wst.jsdt.core.infer.InferredType.addAttribute(InferredType.java:125)
+	at org.eclipse.wst.jsdt.core.infer.InferEngine.populateType(InferEngine.java:1327)
+	at org.eclipse.wst.jsdt.core.infer.InferEngine.handlePotentialType(InferEngine.java:925)
+	at org.eclipse.wst.jsdt.core.infer.InferEngine.visit(InferEngine.java:328)
+	at org.eclipse.wst.jsdt.internal.compiler.DelegateASTVisitor.visit(DelegateASTVisitor.java:526)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.Assignment.traverse(Assignment.java:224)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.CompilationUnitDeclaration.traverse(CompilationUnitDeclaration.java:584)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.CompilationUnitDeclaration.traverse(CompilationUnitDeclaration.java:539)
+	at org.eclipse.wst.jsdt.core.infer.InferEngine.doInfer(InferEngine.java:1772)
+	at org.eclipse.wst.jsdt.internal.compiler.parser.Parser.inferTypes(Parser.java:7093)
+	at org.eclipse.wst.jsdt.internal.compiler.Compiler.accept(Compiler.java:231)
+	at org.eclipse.wst.jsdt.internal.compiler.lookup.LookupEnvironment.askForBinding(LookupEnvironment.java:282)
+	at org.eclipse.wst.jsdt.internal.compiler.lookup.PackageBinding.getTypeOrPackage(PackageBinding.java:249)
+	at org.eclipse.wst.jsdt.internal.compiler.lookup.Scope.getTypeOrPackage(Scope.java:2105)
+	at org.eclipse.wst.jsdt.internal.compiler.lookup.Scope.getBinding(Scope.java:1088)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.SingleNameReference.findBinding(SingleNameReference.java:478)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.SingleNameReference.resolveType(SingleNameReference.java:374)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.SingleNameReference.resolveType(SingleNameReference.java:366)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.FieldReference.resolveForAllocation(FieldReference.java:514)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.AllocationExpression.resolveType(AllocationExpression.java:120)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.Assignment.resolveType(Assignment.java:160)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.Expression.resolve(Expression.java:477)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.AbstractMethodDeclaration.resolveStatements(AbstractMethodDeclaration.java:350)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.MethodDeclaration.resolveStatements(MethodDeclaration.java:137)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.AbstractMethodDeclaration.resolve(AbstractMethodDeclaration.java:304)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.AbstractMethodDeclaration.resolve(AbstractMethodDeclaration.java:375)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.FunctionExpression.resolveType(FunctionExpression.java:58)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.MessageSend.resolveType(MessageSend.java:279)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.Expression.resolve(Expression.java:477)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.CompilationUnitDeclaration.resolve(CompilationUnitDeclaration.java:394)
+	at org.eclipse.wst.jsdt.internal.compiler.Compiler.process(Compiler.java:607)
+	at org.eclipse.wst.jsdt.internal.compiler.Compiler.compile(Compiler.java:355)
+	at org.eclipse.wst.jsdt.internal.core.builder.AbstractImageBuilder.compile(AbstractImageBuilder.java:288)
+	at org.eclipse.wst.jsdt.internal.core.builder.IncrementalImageBuilder.compile(IncrementalImageBuilder.java:306)
+	at org.eclipse.wst.jsdt.internal.core.builder.AbstractImageBuilder.compile(AbstractImageBuilder.java:227)
+	at org.eclipse.wst.jsdt.internal.core.builder.IncrementalImageBuilder.build(IncrementalImageBuilder.java:134)
+	at org.eclipse.wst.jsdt.internal.core.builder.JavaBuilder.buildDeltas(JavaBuilder.java:302)
+	at org.eclipse.wst.jsdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:214)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:726)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:24:00.364
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.wst.jsdt.core.infer.InferredAttribute.<init>(InferredAttribute.java:59)
+	at org.eclipse.wst.jsdt.core.infer.InferredType.addAttribute(InferredType.java:125)
+	at org.eclipse.wst.jsdt.core.infer.InferEngine.populateType(InferEngine.java:1327)
+	at org.eclipse.wst.jsdt.core.infer.InferEngine.handlePotentialType(InferEngine.java:925)
+	at org.eclipse.wst.jsdt.core.infer.InferEngine.visit(InferEngine.java:328)
+	at org.eclipse.wst.jsdt.internal.compiler.DelegateASTVisitor.visit(DelegateASTVisitor.java:526)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.Assignment.traverse(Assignment.java:224)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.CompilationUnitDeclaration.traverse(CompilationUnitDeclaration.java:584)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.CompilationUnitDeclaration.traverse(CompilationUnitDeclaration.java:539)
+	at org.eclipse.wst.jsdt.core.infer.InferEngine.doInfer(InferEngine.java:1772)
+	at org.eclipse.wst.jsdt.internal.compiler.parser.Parser.inferTypes(Parser.java:7093)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnitProblemFinder.accept(CompilationUnitProblemFinder.java:167)
+	at org.eclipse.wst.jsdt.internal.compiler.lookup.LookupEnvironment.askForBinding(LookupEnvironment.java:279)
+	at org.eclipse.wst.jsdt.internal.compiler.lookup.PackageBinding.getTypeOrPackage(PackageBinding.java:249)
+	at org.eclipse.wst.jsdt.internal.compiler.lookup.Scope.getTypeOrPackage(Scope.java:2105)
+	at org.eclipse.wst.jsdt.internal.compiler.lookup.Scope.getBinding(Scope.java:1088)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.SingleNameReference.findBinding(SingleNameReference.java:478)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.SingleNameReference.resolveType(SingleNameReference.java:374)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.SingleNameReference.resolveType(SingleNameReference.java:366)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.FieldReference.resolveForAllocation(FieldReference.java:514)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.AllocationExpression.resolveType(AllocationExpression.java:120)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.Assignment.resolveType(Assignment.java:160)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.Expression.resolve(Expression.java:477)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.AbstractMethodDeclaration.resolveStatements(AbstractMethodDeclaration.java:350)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.MethodDeclaration.resolveStatements(MethodDeclaration.java:137)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.AbstractMethodDeclaration.resolve(AbstractMethodDeclaration.java:304)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.AbstractMethodDeclaration.resolve(AbstractMethodDeclaration.java:375)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.FunctionExpression.resolveType(FunctionExpression.java:58)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.MessageSend.resolveType(MessageSend.java:279)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.Expression.resolve(Expression.java:477)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.CompilationUnitDeclaration.resolve(CompilationUnitDeclaration.java:394)
+	at org.eclipse.wst.jsdt.internal.compiler.Compiler.resolve(Compiler.java:667)
+	at org.eclipse.wst.jsdt.internal.compiler.Compiler.resolve(Compiler.java:709)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:262)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:334)
+	at org.eclipse.wst.jsdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:197)
+	at org.eclipse.wst.jsdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:96)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:742)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:802)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1202)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:95)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:76)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy.initialReconcile(JavaReconcilingStrategy.java:170)
+	at org.eclipse.wst.jsdt.internal.ui.text.CompositeReconcilingStrategy.initialReconcile(CompositeReconcilingStrategy.java:113)
+	at org.eclipse.wst.jsdt.internal.ui.text.JavaCompositeReconcilingStrategy.initialReconcile(JavaCompositeReconcilingStrategy.java:120)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.initialProcess(MonoReconciler.java:105)
+	at org.eclipse.wst.jsdt.internal.ui.text.JavaReconciler.initialProcess(JavaReconciler.java:360)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:173)
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:24:00.524
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.wst.jsdt.core.infer.InferredAttribute.<init>(InferredAttribute.java:59)
+	at org.eclipse.wst.jsdt.core.infer.InferredType.addAttribute(InferredType.java:125)
+	at org.eclipse.wst.jsdt.core.infer.InferEngine.populateType(InferEngine.java:1327)
+	at org.eclipse.wst.jsdt.core.infer.InferEngine.handlePotentialType(InferEngine.java:925)
+	at org.eclipse.wst.jsdt.core.infer.InferEngine.visit(InferEngine.java:328)
+	at org.eclipse.wst.jsdt.internal.compiler.DelegateASTVisitor.visit(DelegateASTVisitor.java:526)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.Assignment.traverse(Assignment.java:224)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.CompilationUnitDeclaration.traverse(CompilationUnitDeclaration.java:584)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.CompilationUnitDeclaration.traverse(CompilationUnitDeclaration.java:539)
+	at org.eclipse.wst.jsdt.core.infer.InferEngine.doInfer(InferEngine.java:1772)
+	at org.eclipse.wst.jsdt.internal.compiler.parser.Parser.inferTypes(Parser.java:7093)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnitProblemFinder.accept(CompilationUnitProblemFinder.java:167)
+	at org.eclipse.wst.jsdt.internal.compiler.lookup.LookupEnvironment.askForBinding(LookupEnvironment.java:279)
+	at org.eclipse.wst.jsdt.internal.compiler.lookup.PackageBinding.getTypeOrPackage(PackageBinding.java:249)
+	at org.eclipse.wst.jsdt.internal.compiler.lookup.Scope.getTypeOrPackage(Scope.java:2105)
+	at org.eclipse.wst.jsdt.internal.compiler.lookup.Scope.getBinding(Scope.java:1088)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.SingleNameReference.findBinding(SingleNameReference.java:478)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.SingleNameReference.resolveType(SingleNameReference.java:374)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.SingleNameReference.resolveType(SingleNameReference.java:366)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.FieldReference.resolveForAllocation(FieldReference.java:514)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.AllocationExpression.resolveType(AllocationExpression.java:120)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.Assignment.resolveType(Assignment.java:160)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.Expression.resolve(Expression.java:477)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.AbstractMethodDeclaration.resolveStatements(AbstractMethodDeclaration.java:350)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.MethodDeclaration.resolveStatements(MethodDeclaration.java:137)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.AbstractMethodDeclaration.resolve(AbstractMethodDeclaration.java:304)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.AbstractMethodDeclaration.resolve(AbstractMethodDeclaration.java:375)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.FunctionExpression.resolveType(FunctionExpression.java:58)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.MessageSend.resolveType(MessageSend.java:279)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.Expression.resolve(Expression.java:477)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.CompilationUnitDeclaration.resolve(CompilationUnitDeclaration.java:394)
+	at org.eclipse.wst.jsdt.internal.compiler.Compiler.resolve(Compiler.java:667)
+	at org.eclipse.wst.jsdt.internal.compiler.Compiler.resolve(Compiler.java:709)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:262)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:334)
+	at org.eclipse.wst.jsdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:197)
+	at org.eclipse.wst.jsdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:96)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:742)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:802)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1202)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1179)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1163)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:101)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:76)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:143)
+	at org.eclipse.wst.jsdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:85)
+	at org.eclipse.wst.jsdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:94)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
+	at org.eclipse.wst.jsdt.internal.ui.text.JavaReconciler.process(JavaReconciler.java:371)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:24:01.814
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.wst.jsdt.core.infer.InferredAttribute.<init>(InferredAttribute.java:59)
+	at org.eclipse.wst.jsdt.core.infer.InferredType.addAttribute(InferredType.java:125)
+	at org.eclipse.wst.jsdt.core.infer.InferEngine.populateType(InferEngine.java:1327)
+	at org.eclipse.wst.jsdt.core.infer.InferEngine.handlePotentialType(InferEngine.java:925)
+	at org.eclipse.wst.jsdt.core.infer.InferEngine.visit(InferEngine.java:328)
+	at org.eclipse.wst.jsdt.internal.compiler.DelegateASTVisitor.visit(DelegateASTVisitor.java:526)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.Assignment.traverse(Assignment.java:224)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.CompilationUnitDeclaration.traverse(CompilationUnitDeclaration.java:584)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.CompilationUnitDeclaration.traverse(CompilationUnitDeclaration.java:539)
+	at org.eclipse.wst.jsdt.core.infer.InferEngine.doInfer(InferEngine.java:1772)
+	at org.eclipse.wst.jsdt.internal.compiler.parser.Parser.inferTypes(Parser.java:7093)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnitProblemFinder.accept(CompilationUnitProblemFinder.java:167)
+	at org.eclipse.wst.jsdt.internal.compiler.lookup.LookupEnvironment.askForBinding(LookupEnvironment.java:279)
+	at org.eclipse.wst.jsdt.internal.compiler.lookup.PackageBinding.getTypeOrPackage(PackageBinding.java:249)
+	at org.eclipse.wst.jsdt.internal.compiler.lookup.Scope.getTypeOrPackage(Scope.java:2105)
+	at org.eclipse.wst.jsdt.internal.compiler.lookup.Scope.getBinding(Scope.java:1088)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.SingleNameReference.findBinding(SingleNameReference.java:478)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.SingleNameReference.resolveType(SingleNameReference.java:374)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.SingleNameReference.resolveType(SingleNameReference.java:366)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.FieldReference.resolveForAllocation(FieldReference.java:514)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.AllocationExpression.resolveType(AllocationExpression.java:120)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.Assignment.resolveType(Assignment.java:160)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.Expression.resolve(Expression.java:477)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.AbstractMethodDeclaration.resolveStatements(AbstractMethodDeclaration.java:350)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.MethodDeclaration.resolveStatements(MethodDeclaration.java:137)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.AbstractMethodDeclaration.resolve(AbstractMethodDeclaration.java:304)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.AbstractMethodDeclaration.resolve(AbstractMethodDeclaration.java:375)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.FunctionExpression.resolveType(FunctionExpression.java:58)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.MessageSend.resolveType(MessageSend.java:279)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.Expression.resolve(Expression.java:477)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.CompilationUnitDeclaration.resolve(CompilationUnitDeclaration.java:394)
+	at org.eclipse.wst.jsdt.internal.compiler.Compiler.resolve(Compiler.java:667)
+	at org.eclipse.wst.jsdt.internal.compiler.Compiler.resolve(Compiler.java:709)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:262)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:334)
+	at org.eclipse.wst.jsdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:197)
+	at org.eclipse.wst.jsdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:96)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:742)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:802)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1202)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:95)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:76)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:143)
+	at org.eclipse.wst.jsdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:85)
+	at org.eclipse.wst.jsdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:94)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
+	at org.eclipse.wst.jsdt.internal.ui.text.JavaReconciler.process(JavaReconciler.java:371)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:24:22.116
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.wst.jsdt.core.infer.InferredAttribute.<init>(InferredAttribute.java:59)
+	at org.eclipse.wst.jsdt.core.infer.InferredType.addAttribute(InferredType.java:125)
+	at org.eclipse.wst.jsdt.core.infer.InferEngine.populateType(InferEngine.java:1327)
+	at org.eclipse.wst.jsdt.core.infer.InferEngine.handlePotentialType(InferEngine.java:925)
+	at org.eclipse.wst.jsdt.core.infer.InferEngine.visit(InferEngine.java:328)
+	at org.eclipse.wst.jsdt.internal.compiler.DelegateASTVisitor.visit(DelegateASTVisitor.java:526)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.Assignment.traverse(Assignment.java:224)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.CompilationUnitDeclaration.traverse(CompilationUnitDeclaration.java:584)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.CompilationUnitDeclaration.traverse(CompilationUnitDeclaration.java:539)
+	at org.eclipse.wst.jsdt.core.infer.InferEngine.doInfer(InferEngine.java:1772)
+	at org.eclipse.wst.jsdt.internal.compiler.parser.Parser.inferTypes(Parser.java:7093)
+	at org.eclipse.wst.jsdt.internal.codeassist.SelectionEngine.doParse(SelectionEngine.java:1287)
+	at org.eclipse.wst.jsdt.internal.codeassist.impl.Engine.accept(Engine.java:91)
+	at org.eclipse.wst.jsdt.internal.compiler.lookup.LookupEnvironment.askForBinding(LookupEnvironment.java:279)
+	at org.eclipse.wst.jsdt.internal.compiler.lookup.PackageBinding.getTypeOrPackage(PackageBinding.java:249)
+	at org.eclipse.wst.jsdt.internal.compiler.lookup.Scope.getTypeOrPackage(Scope.java:2105)
+	at org.eclipse.wst.jsdt.internal.compiler.lookup.Scope.getBinding(Scope.java:1088)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.SingleNameReference.findBinding(SingleNameReference.java:478)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.SingleNameReference.resolveType(SingleNameReference.java:374)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.SingleNameReference.resolveType(SingleNameReference.java:366)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.FieldReference.resolveForAllocation(FieldReference.java:514)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.AllocationExpression.resolveType(AllocationExpression.java:120)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.Assignment.resolveType(Assignment.java:160)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.Expression.resolve(Expression.java:477)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.AbstractMethodDeclaration.resolveStatements(AbstractMethodDeclaration.java:350)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.MethodDeclaration.resolveStatements(MethodDeclaration.java:137)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.AbstractMethodDeclaration.resolve(AbstractMethodDeclaration.java:304)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.AbstractMethodDeclaration.resolve(AbstractMethodDeclaration.java:375)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.FunctionExpression.resolveType(FunctionExpression.java:58)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.MessageSend.resolveType(MessageSend.java:279)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.Expression.resolve(Expression.java:477)
+	at org.eclipse.wst.jsdt.internal.compiler.ast.CompilationUnitDeclaration.resolve(CompilationUnitDeclaration.java:394)
+	at org.eclipse.wst.jsdt.internal.codeassist.SelectionEngine.select(SelectionEngine.java:741)
+	at org.eclipse.wst.jsdt.internal.core.Openable.codeSelect(Openable.java:167)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnit.codeSelect(CompilationUnit.java:318)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnit.codeSelect(CompilationUnit.java:312)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.hover.AbstractJavaEditorTextHover.getHoverInfo(AbstractJavaEditorTextHover.java:114)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.hover.AbstractJavaEditorTextHover.getHoverInfo2(AbstractJavaEditorTextHover.java:95)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:147)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:78)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:24:23.809
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:24:31.481
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:25:14.948
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:25:18.651
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:25:19.104
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:25:23.339
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:26:21.511
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:26:24.691
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:26:27.880
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:26:31.063
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:26:33.273
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:26:35.457
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:26:48.002
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:26:48.376
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:26:48.923
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:27:00.192
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.jface.text 4 0 2014-10-15 21:27:04.646
+!MESSAGE Unexpected runtime error while computing a text hover
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.wst.jsdt.internal.compiler.lookup.CompilationUnitScope.connectTypeHierarchy(CompilationUnitScope.java:669)
+	at org.eclipse.wst.jsdt.internal.compiler.lookup.CompilationUnitScope.connectTypeHierarchy(CompilationUnitScope.java:674)
+	at org.eclipse.wst.jsdt.internal.compiler.lookup.LookupEnvironment.completeTypeBindings(LookupEnvironment.java:387)
+	at org.eclipse.wst.jsdt.internal.compiler.lookup.LookupEnvironment.completeTypeBindings(LookupEnvironment.java:443)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnitProblemFinder.accept(CompilationUnitProblemFinder.java:174)
+	at org.eclipse.wst.jsdt.internal.compiler.lookup.LookupEnvironment.askForBinding(LookupEnvironment.java:279)
+	at org.eclipse.wst.jsdt.internal.compiler.lookup.LookupEnvironment.askForType(LookupEnvironment.java:132)
+	at org.eclipse.wst.jsdt.internal.compiler.lookup.LookupEnvironment.getType(LookupEnvironment.java:766)
+	at org.eclipse.wst.jsdt.internal.compiler.lookup.LookupEnvironment.getResolvedType(LookupEnvironment.java:720)
+	at org.eclipse.wst.jsdt.internal.compiler.lookup.Scope.getJavaLangString(Scope.java:1745)
+	at org.eclipse.wst.jsdt.core.dom.DefaultBindingResolver.resolveExpressionType(DefaultBindingResolver.java:604)
+	at org.eclipse.wst.jsdt.core.dom.Expression.resolveTypeBinding(Expression.java:111)
+	at org.eclipse.wst.jsdt.internal.corext.refactoring.nls.NLSHintHelper.getAccessorClassReference(NLSHintHelper.java:97)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.hover.NLSStringHover.getHoverInfo(NLSStringHover.java:96)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.hover.AbstractJavaEditorTextHover.getHoverInfo2(AbstractJavaEditorTextHover.java:95)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:147)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:78)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:27:07.349
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:27:10.005
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:27:14.162
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:27:16.334
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:27:17.193
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:27:17.481
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:27:19.584
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:27:48.891
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.jface 2 0 2014-10-15 21:27:59.751
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2014-10-15 21:27:59.751
+!MESSAGE A conflict occurred for CTRL+I:
+Binding(CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.indent,Indent Line,
+		Indents the current line,
+		Category(org.eclipse.wst.jsdt.ui.category.source,Source,JavaScript Source Actions,true),
+		org.eclipse.ui.internal.MakeHandlersGo@6b8fa6d2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+Binding(CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.format.active.elements,Format Active Elements,
+		Format active elements,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@415419bd,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2014-10-15 21:27:59.751
+!MESSAGE A conflict occurred for CTRL+SHIFT+F:
+Binding(CTRL+SHIFT+F,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.format,Format,
+		Format the selected text,
+		Category(org.eclipse.wst.jsdt.ui.category.source,Source,JavaScript Source Actions,true),
+		org.eclipse.ui.internal.MakeHandlersGo@24115c29,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+F,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.format.document,Format,
+		Format selection,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@4e227a02,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2014-10-15 21:27:59.751
+!MESSAGE A conflict occurred for ALT+SHIFT+ARROW_UP:
+Binding(ALT+SHIFT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.select.enclosing,Select Enclosing Element,
+		Expand selection to include enclosing element,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@6fb99a3e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+Binding(ALT+SHIFT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.structure.select.enclosing,Select Enclosing Element,
+		Expand selection to include enclosing element,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@339677d0,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2014-10-15 21:27:59.751
+!MESSAGE A conflict occurred for CTRL+SHIFT+P:
+Binding(CTRL+SHIFT+P,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.goto.matching.bracket,Go to Matching Bracket,
+		Moves the cursor to the matching bracket,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@23d95c0,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+P,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.goto.matching.bracket,Matching Character,
+		Go to Matching Character,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@2ce0e54e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2014-10-15 21:27:59.751
+!MESSAGE A conflict occurred for CTRL+SHIFT+/:
+Binding(CTRL+SHIFT+/,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.add.block.comment,Add Block Comment,
+		Enclose the selection with a block comment,
+		Category(org.eclipse.wst.jsdt.ui.category.source,Source,JavaScript Source Actions,true),
+		org.eclipse.ui.internal.MakeHandlersGo@19327166,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+/,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.add.block.comment,Add Block Comment,
+		Add Block Comment,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@42eec8b3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2014-10-15 21:27:59.751
+!MESSAGE A conflict occurred for CTRL+O:
+Binding(CTRL+O,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.show.outline,Quick Outline,
+		Show the quick outline for the editor input,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@3eb2ec76,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+Binding(CTRL+O,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.quick_outline,Quick Outline,
+		Show the quick outline for the editor input,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@54c25722,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2014-10-15 21:27:59.751
+!MESSAGE A conflict occurred for F3:
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.open.editor,Open Declaration,
+		Open an editor on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@22e6a4a7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.open.editor,Open Declaration,
+		Open an editor on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@5443e1d7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javascriptViewScope,,,system)
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.open.file.from.source,Open Selection,
+		Open an editor on the selected link,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@34a01579,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2014-10-15 21:27:59.751
+!MESSAGE A conflict occurred for CTRL+SHIFT+ARROW_UP:
+Binding(CTRL+SHIFT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.goto.previous.member,Go to Previous Member,
+		Move the caret to the previous member of the JavaScript file,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@79e1d5ec,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.wst.xml.ui.previousSibling,Previous Sibling,
+		Go to Previous Sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@4e4879c1,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2014-10-15 21:27:59.751
+!MESSAGE A conflict occurred for ALT+SHIFT+ARROW_DOWN:
+Binding(ALT+SHIFT+ARROW_DOWN,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.select.last,Restore Last Selection,
+		Restore last selection,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@59a3b777,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+Binding(ALT+SHIFT+ARROW_DOWN,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.structure.select.last,Restore Last Selection,
+		Restore last selection,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@507e0eb1,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2014-10-15 21:27:59.751
+!MESSAGE A conflict occurred for CTRL+SHIFT+C:
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.toggle.comment,Toggle Comment,
+		Toggle comment the selected lines,
+		Category(org.eclipse.wst.jsdt.ui.category.source,Source,JavaScript Source Actions,true),
+		org.eclipse.ui.internal.MakeHandlersGo@b62139b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.toggle.comment,Toggle Comment,
+		Toggle Comment,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@1806790a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2014-10-15 21:27:59.751
+!MESSAGE A conflict occurred for ALT+SHIFT+ARROW_RIGHT:
+Binding(ALT+SHIFT+ARROW_RIGHT,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.select.next,Select Next Element,
+		Expand selection to include next sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@53f52af3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+Binding(ALT+SHIFT+ARROW_RIGHT,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.structure.select.next,Select Next Element,
+		Expand selection to include next sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@29969819,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2014-10-15 21:27:59.751
+!MESSAGE A conflict occurred for CTRL+SHIFT+\:
+Binding(CTRL+SHIFT+\,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.remove.block.comment,Remove Block Comment,
+		Remove the block comment enclosing the selection,
+		Category(org.eclipse.wst.jsdt.ui.category.source,Source,JavaScript Source Actions,true),
+		org.eclipse.ui.internal.MakeHandlersGo@4d6e295,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+\,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.remove.block.comment,Remove Block Comment,
+		Remove Block Comment,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@25889fdf,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2014-10-15 21:27:59.751
+!MESSAGE A conflict occurred for CTRL+SHIFT+ARROW_DOWN:
+Binding(CTRL+SHIFT+ARROW_DOWN,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.goto.next.member,Go to Next Member,
+		Move the caret to the next member of the JavaScript file,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@37b5a6ae,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+ARROW_DOWN,
+	ParameterizedCommand(Command(org.eclipse.wst.xml.ui.nextSibling,Next Sibling,
+		Go to Next Sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@5524c74c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2014-10-15 21:27:59.751
+!MESSAGE A conflict occurred for ALT+SHIFT+ARROW_LEFT:
+Binding(ALT+SHIFT+ARROW_LEFT,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.select.previous,Select Previous Element,
+		Expand selection to include previous sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@76d20614,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+Binding(ALT+SHIFT+ARROW_LEFT,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.structure.select.previous,Select Previous Element,
+		Expand selection to include previous sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@1f5c62aa,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:28:15.681
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:28:16.061
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:28:17.833
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:29:19.153
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:29:22.138
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:29:22.528
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:29:23.731
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:29:25.482
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:29:26.653
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:29:26.763
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:29:28.763
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:29:49.352
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:29:49.710
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:29:52.784
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:29:53.549
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:29:53.966
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.jst.jsf.facelet.core 4 0 2014-10-15 21:30:37.696
+!MESSAGE Error initializing facelet registry entry
+!STACK 0
+org.eclipse.emf.ecore.resource.Resource$IOWrappedException: Package with uri 'null' not found. (file:///C:/garofalo/eclipseJuno/META-INF/facelet/icefaces.taglib.xml, 6, 17)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.handleErrors(XMLLoadImpl.java:77)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:185)
+	at org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl.doLoad(XMLResourceImpl.java:240)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1505)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.TagModelLoader.loadFromInputStream(TagModelLoader.java:100)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.JarFileFaceletTaglibLocator.processJar(JarFileFaceletTaglibLocator.java:239)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.JarFileFaceletTaglibLocator.start(JarFileFaceletTaglibLocator.java:128)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.JarFileFaceletTaglibLocator.start(JarFileFaceletTaglibLocator.java:1)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.ProjectTaglibDescriptor$1.run(ProjectTaglibDescriptor.java:82)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.ProjectTaglibDescriptor.initialize(ProjectTaglibDescriptor.java:71)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.ProjectTaglibDescriptor.getTagLibraries(ProjectTaglibDescriptor.java:117)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.FaceletTagRegistry.initialize(FaceletTagRegistry.java:183)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.FaceletTagRegistry.getAllTagLibraries(FaceletTagRegistry.java:129)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.FaceletTagRegistry.getTagLibrary(FaceletTagRegistry.java:230)
+	at org.eclipse.jst.jsf.facelet.core.internal.metadata.FaceletNamespaceMetaDataLocator.locateMetaDataModelProviders(FaceletNamespaceMetaDataLocator.java:53)
+	at org.eclipse.jst.jsf.common.metadata.internal.DomainLoadingStrategy.locateMetaDataSourceInstances(DomainLoadingStrategy.java:143)
+	at org.eclipse.jst.jsf.common.metadata.internal.DomainLoadingStrategy.load(DomainLoadingStrategy.java:55)
+	at org.eclipse.jst.jsf.common.metadata.internal.MetaDataModel.load(MetaDataModel.java:93)
+	at org.eclipse.jst.jsf.common.metadata.internal.MetaDataModelManager.loadMetadata(MetaDataModelManager.java:147)
+	at org.eclipse.jst.jsf.common.metadata.internal.MetaDataModelManager.getModel(MetaDataModelManager.java:90)
+	at org.eclipse.jst.jsf.common.metadata.query.internal.MetaDataQueryHelper.getMDModel(MetaDataQueryHelper.java:124)
+	at org.eclipse.jst.jsf.common.metadata.query.internal.MetaDataQueryHelper.getModel(MetaDataQueryHelper.java:59)
+	at org.eclipse.jst.jsf.common.metadata.query.internal.MetaDataQueryHelper.getEntities(MetaDataQueryHelper.java:69)
+	at org.eclipse.jst.jsf.common.metadata.query.internal.MetaDataQueryHelper.getEntity(MetaDataQueryHelper.java:64)
+	at org.eclipse.jst.jsf.metadataprocessors.MetaDataEnabledProcessingFactory.getAttributeValueRuntimeTypeFeatureProcessors(MetaDataEnabledProcessingFactory.java:100)
+	at org.eclipse.jst.jsf.metadataprocessors.MetaDataEnabledProcessingFactory.getAttributeValueRuntimeTypeFeatureProcessors(MetaDataEnabledProcessingFactory.java:146)
+	at org.eclipse.jst.jsf.validation.internal.strategy.AttributeValidatingStrategy.validateNonELAttributeValue(AttributeValidatingStrategy.java:695)
+	at org.eclipse.jst.jsf.validation.internal.strategy.AttributeValidatingStrategy.access$1(AttributeValidatingStrategy.java:672)
+	at org.eclipse.jst.jsf.validation.internal.strategy.AttributeValidatingStrategy$1.run(AttributeValidatingStrategy.java:186)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jst.jsf.validation.internal.strategy.AttributeValidatingStrategy.validateAttributeValue(AttributeValidatingStrategy.java:168)
+	at org.eclipse.jst.jsf.validation.internal.strategy.AttributeValidatingStrategy.validate(AttributeValidatingStrategy.java:144)
+	at org.eclipse.jst.jsf.validation.internal.XMLViewDefnValidator.validateTag(XMLViewDefnValidator.java:99)
+	at org.eclipse.jst.jsf.validation.internal.XMLViewDefnValidator.validateRegions(XMLViewDefnValidator.java:177)
+	at org.eclipse.jst.jsf.validation.internal.XMLViewDefnValidator.validateView(XMLViewDefnValidator.java:134)
+	at org.eclipse.jst.jsf.facelet.ui.internal.validation.DefaultFaceletValidationStrategy.doValidate(DefaultFaceletValidationStrategy.java:42)
+	at org.eclipse.jst.jsf.facelet.ui.internal.validation.AbstractFaceletValidationStrategy.validateFile(AbstractFaceletValidationStrategy.java:96)
+	at org.eclipse.jst.jsf.facelet.ui.internal.validation.HTMLValidator.validate(HTMLValidator.java:57)
+	at org.eclipse.wst.validation.Validator$V2.validate(Validator.java:1159)
+	at org.eclipse.wst.validation.internal.ValManager.validate(ValManager.java:704)
+	at org.eclipse.wst.validation.internal.ValManager$1.visit(ValManager.java:665)
+	at org.eclipse.wst.validation.internal.ValManager.accept(ValManager.java:783)
+	at org.eclipse.wst.validation.internal.ValManager.validate(ValManager.java:669)
+	at org.eclipse.wst.validation.internal.ValBuilderJob$Visitor.visit(ValBuilderJob.java:327)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:69)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:80)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:80)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:80)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:80)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:80)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:49)
+	at org.eclipse.wst.validation.internal.ValBuilderJob.deltaBuild(ValBuilderJob.java:211)
+	at org.eclipse.wst.validation.internal.ValBuilderJob.run(ValBuilderJob.java:179)
+	at org.eclipse.wst.validation.internal.ValBuilderJob.runInWorkspace(ValBuilderJob.java:126)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.eclipse.emf.ecore.xmi.PackageNotFoundException: Package with uri 'null' not found. (file:///C:/garofalo/eclipseJuno/META-INF/facelet/icefaces.taglib.xml, 6, 17)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObjectByType(XMLHandler.java:1302)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createTopObject(XMLHandler.java:1463)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.processElement(XMLHandler.java:1014)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:996)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:707)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.startElement(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$ContentDriver.scanRootElementHook(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(Unknown Source)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:175)
+	... 55 more
+
+!ENTRY org.eclipse.jst.jsf.facelet.core 4 0 2014-10-15 21:30:38.010
+!MESSAGE Loading web root taglibs for project: WarGame
+!STACK 0
+java.io.FileNotFoundException: C:\WarGame\WebContent\WEB-INF\facelet-taglib_1_0.dtd (Impossibile trovare il percorso specificato)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at org.eclipse.emf.ecore.resource.impl.FileURIHandlerImpl.createInputStream(FileURIHandlerImpl.java:99)
+	at org.eclipse.emf.ecore.resource.impl.ExtensibleURIConverterImpl.createInputStream(ExtensibleURIConverterImpl.java:354)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.resolveEntity(XMLHandler.java:805)
+	at com.sun.org.apache.xerces.internal.util.EntityResolverWrapper.resolveEntity(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLEntityManager.resolveEntityAsPerStax(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$DTDDriver.dispatch(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$DTDDriver.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(Unknown Source)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:175)
+	at org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl.doLoad(XMLResourceImpl.java:240)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1505)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.TagModelLoader.loadFromInputStream(TagModelLoader.java:100)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.ContextParamSpecifiedFaceletTaglibLocator.createTagRecord(ContextParamSpecifiedFaceletTaglibLocator.java:147)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.ContextParamSpecifiedFaceletTaglibLocator.doLocate(ContextParamSpecifiedFaceletTaglibLocator.java:120)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.AbstractFaceletTaglibLocator.doLocate(AbstractFaceletTaglibLocator.java:1)
+	at org.eclipse.jst.jsf.common.internal.locator.AbstractLocator.locate(AbstractLocator.java:96)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.ProjectTaglibDescriptor$1.run(ProjectTaglibDescriptor.java:83)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.ProjectTaglibDescriptor.initialize(ProjectTaglibDescriptor.java:71)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.ProjectTaglibDescriptor.getTagLibraries(ProjectTaglibDescriptor.java:117)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.FaceletTagRegistry.initialize(FaceletTagRegistry.java:183)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.FaceletTagRegistry.getAllTagLibraries(FaceletTagRegistry.java:129)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.FaceletTagRegistry.getTagLibrary(FaceletTagRegistry.java:230)
+	at org.eclipse.jst.jsf.facelet.core.internal.metadata.FaceletNamespaceMetaDataLocator.locateMetaDataModelProviders(FaceletNamespaceMetaDataLocator.java:53)
+	at org.eclipse.jst.jsf.common.metadata.internal.DomainLoadingStrategy.locateMetaDataSourceInstances(DomainLoadingStrategy.java:143)
+	at org.eclipse.jst.jsf.common.metadata.internal.DomainLoadingStrategy.load(DomainLoadingStrategy.java:55)
+	at org.eclipse.jst.jsf.common.metadata.internal.MetaDataModel.load(MetaDataModel.java:93)
+	at org.eclipse.jst.jsf.common.metadata.internal.MetaDataModelManager.loadMetadata(MetaDataModelManager.java:147)
+	at org.eclipse.jst.jsf.common.metadata.internal.MetaDataModelManager.getModel(MetaDataModelManager.java:90)
+	at org.eclipse.jst.jsf.common.metadata.query.internal.MetaDataQueryHelper.getMDModel(MetaDataQueryHelper.java:124)
+	at org.eclipse.jst.jsf.common.metadata.query.internal.MetaDataQueryHelper.getModel(MetaDataQueryHelper.java:59)
+	at org.eclipse.jst.jsf.common.metadata.query.internal.MetaDataQueryHelper.getEntities(MetaDataQueryHelper.java:69)
+	at org.eclipse.jst.jsf.common.metadata.query.internal.MetaDataQueryHelper.getEntity(MetaDataQueryHelper.java:64)
+	at org.eclipse.jst.jsf.metadataprocessors.MetaDataEnabledProcessingFactory.getAttributeValueRuntimeTypeFeatureProcessors(MetaDataEnabledProcessingFactory.java:100)
+	at org.eclipse.jst.jsf.metadataprocessors.MetaDataEnabledProcessingFactory.getAttributeValueRuntimeTypeFeatureProcessors(MetaDataEnabledProcessingFactory.java:146)
+	at org.eclipse.jst.jsf.validation.internal.strategy.AttributeValidatingStrategy.validateNonELAttributeValue(AttributeValidatingStrategy.java:695)
+	at org.eclipse.jst.jsf.validation.internal.strategy.AttributeValidatingStrategy.access$1(AttributeValidatingStrategy.java:672)
+	at org.eclipse.jst.jsf.validation.internal.strategy.AttributeValidatingStrategy$1.run(AttributeValidatingStrategy.java:186)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jst.jsf.validation.internal.strategy.AttributeValidatingStrategy.validateAttributeValue(AttributeValidatingStrategy.java:168)
+	at org.eclipse.jst.jsf.validation.internal.strategy.AttributeValidatingStrategy.validate(AttributeValidatingStrategy.java:144)
+	at org.eclipse.jst.jsf.validation.internal.XMLViewDefnValidator.validateTag(XMLViewDefnValidator.java:99)
+	at org.eclipse.jst.jsf.validation.internal.XMLViewDefnValidator.validateRegions(XMLViewDefnValidator.java:177)
+	at org.eclipse.jst.jsf.validation.internal.XMLViewDefnValidator.validateView(XMLViewDefnValidator.java:134)
+	at org.eclipse.jst.jsf.facelet.ui.internal.validation.DefaultFaceletValidationStrategy.doValidate(DefaultFaceletValidationStrategy.java:42)
+	at org.eclipse.jst.jsf.facelet.ui.internal.validation.AbstractFaceletValidationStrategy.validateFile(AbstractFaceletValidationStrategy.java:96)
+	at org.eclipse.jst.jsf.facelet.ui.internal.validation.HTMLValidator.validate(HTMLValidator.java:57)
+	at org.eclipse.wst.validation.Validator$V2.validate(Validator.java:1159)
+	at org.eclipse.wst.validation.internal.ValManager.validate(ValManager.java:704)
+	at org.eclipse.wst.validation.internal.ValManager$1.visit(ValManager.java:665)
+	at org.eclipse.wst.validation.internal.ValManager.accept(ValManager.java:783)
+	at org.eclipse.wst.validation.internal.ValManager.validate(ValManager.java:669)
+	at org.eclipse.wst.validation.internal.ValBuilderJob$Visitor.visit(ValBuilderJob.java:327)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:69)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:80)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:80)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:80)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:80)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:80)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:49)
+	at org.eclipse.wst.validation.internal.ValBuilderJob.deltaBuild(ValBuilderJob.java:211)
+	at org.eclipse.wst.validation.internal.ValBuilderJob.run(ValBuilderJob.java:179)
+	at org.eclipse.wst.validation.internal.ValBuilderJob.runInWorkspace(ValBuilderJob.java:126)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:31:38.783
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:31:39.243
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:31:43.730
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:31:46.478
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:31:46.893
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:31:53.411
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:32:02.297
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:32:02.641
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:32:04.540
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:32:04.914
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:32:06.695
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:32:07.715
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:32:09.124
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:32:09.472
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:32:20.243
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:32:22.647
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:32:29.374
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:32:30.796
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:32:31.156
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:32:33.258
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:32:35.104
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:32:35.448
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:32:36.682
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:32:38.604
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:32:46.021
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:32:48.896
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:32:50.287
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:32:56.379
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:32:56.691
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:33:00.647
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:33:02.656
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:33:03.016
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:33:03.596
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:33:05.495
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:33:12.875
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:33:17.135
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:33:17.334
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:33:18.530
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:33:19.020
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:39:07.010
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:39:08.166
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:39:12.417
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:39:12.769
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:39:19.426
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:39:46.146
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:39:47.426
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:39:49.339
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:39:49.691
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:39:54.605
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:39:54.980
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:41:22.788
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:41:28.554
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:41:31.211
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:41:31.914
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:41:32.320
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:41:37.715
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:41:38.130
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:42:16.423
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:42:16.892
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:42:19.739
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:42:34.037
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:42:37.506
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:42:38.006
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:42:44.115
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:42:46.272
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:42:47.879
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:42:49.109
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:43:08.875
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:43:09.234
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:43:17.750
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:43:18.094
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:43:23.079
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:43:23.422
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:44:24.052
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:44:24.396
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:44:28.412
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:44:56.156
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:45:01.969
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:45:08.713
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:45:18.885
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:45:19.823
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:45:20.673
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:45:21.684
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:45:27.368
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:45:29.746
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:45:30.121
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:45:33.528
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:45:34.711
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:45:38.345
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:45:38.360
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:45:40.187
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:45:56.981
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:46:00.019
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:46:01.754
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:46:01.832
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:46:03.989
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:48:41.812
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:48:42.176
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:49:20.357
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:49:20.701
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:49:37.358
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:49:43.655
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:49:48.968
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:49:49.390
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:49:55.390
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:50:07.485
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:50:07.828
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:50:44.127
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:50:44.455
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:50:46.658
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:50:47.002
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:51:10.559
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:51:10.899
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:51:38.574
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:51:42.429
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:51:44.726
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:51:45.070
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:51:53.039
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:51:53.430
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:51:55.133
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:51:55.501
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:51:57.787
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:52:10.178
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:52:10.537
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:52:12.470
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:52:18.135
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:52:19.515
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:52:21.870
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:52:24.807
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:52:27.496
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:52:27.840
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:52:32.098
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:52:34.739
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:52:39.911
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:52:47.833
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:52:48.209
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:52:49.499
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:52:49.849
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:52:57.108
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:52:58.249
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:52:59.206
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:52:59.346
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:52:59.366
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:53:49.308
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:53:53.934
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:53:55.074
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:54:00.224
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:54:01.854
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:54:05.008
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:54:06.633
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:54:07.790
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:54:11.352
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:54:11.430
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:54:21.087
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:54:25.744
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:54:27.119
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:54:27.353
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:54:27.853
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:55:11.006
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:55:17.575
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:55:24.747
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:55:29.482
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:55:32.131
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:55:37.304
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:55:38.429
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:55:39.554
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:55:45.195
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:55:46.210
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:55:46.320
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:55:47.554
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:55:56.633
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:56:02.052
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:56:15.287
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:56:16.929
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:56:20.454
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:56:20.548
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:59:00.880
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:59:04.021
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:59:07.006
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 21:59:07.162
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:00:06.047
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:00:15.782
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:00:16.651
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:00:35.363
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:00:40.770
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:00:41.098
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:00:42.520
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:00:45.989
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:00:47.317
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:00:47.676
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:01:03.677
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:01:04.021
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:01:09.505
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:01:09.849
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:01:25.397
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:01:25.725
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:01:32.038
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:01:32.350
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:01:34.116
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:01:34.444
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:01:45.585
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:01:56.102
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:01:56.461
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:02:06.368
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:02:08.040
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:02:09.071
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:02:11.696
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:02:23.900
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:02:25.869
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:02:26.619
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:02:26.944
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:02:33.622
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:02:33.934
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:02:39.060
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:02:46.205
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:02:48.055
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:02:48.225
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:04:40.550
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:04:49.677
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:04:50.569
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:04:51.232
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:04:52.174
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:04:52.517
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:05:05.958
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:05:06.257
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:05:14.661
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:05:19.771
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:05:19.802
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:08:13.291
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:08:16.443
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:08:22.022
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:08:22.037
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:08:42.802
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:08:47.610
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:08:49.265
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:08:49.310
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:09:03.330
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:09:03.728
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:09:09.583
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:09:11.567
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:10:53.523
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:11:50.936
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:11:56.212
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:11:59.575
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:12:02.236
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:12:04.872
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:12:07.528
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:12:22.686
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:12:24.616
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:12:24.800
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:12:25.216
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:12:25.619
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:12:26.388
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:12:27.790
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:14:57.323
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:14:57.675
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:15:08.479
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:15:08.839
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:15:10.448
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:15:17.464
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:15:17.573
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:15:20.261
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:15:21.105
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:15:21.461
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:16:35.686
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:16:36.812
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:16:36.855
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:17:18.341
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:17:52.503
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:17:55.664
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:17:56.728
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:17:56.801
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:19:08.020
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:19:10.677
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:19:12.112
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:19:12.154
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:19:12.509
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:19:12.551
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:19:28.790
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:19:29.683
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:19:29.726
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:19:30.080
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:19:30.122
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:19:34.799
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:19:35.649
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:19:35.899
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:19:37.518
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:19:47.637
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:19:47.645
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:19:49.739
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:23:51.242
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:23:51.286
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:23:51.631
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:23:51.673
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:23:54.090
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:23:55.359
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:23:55.428
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:23:55.776
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:23:55.818
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:24:00.038
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:24:00.080
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:24:00.429
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:24:00.472
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:24:01.246
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:24:07.349
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:24:07.392
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:24:07.787
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:24:07.829
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:24:08.892
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:24:33.553
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:24:40.573
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:24:40.684
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:24:42.299
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:28:48.649
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:28:48.698
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:28:49.148
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:28:49.212
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:29:18.232
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:29:20.447
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:29:22.081
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:29:22.137
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:29:23.129
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:29:25.831
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:29:28.539
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:29:32.570
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:29:32.620
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:29:33.023
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:29:33.076
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:29:35.406
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:29:35.457
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:29:35.839
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:29:35.890
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:29:53.741
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:29:55.364
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:30:02.036
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:30:02.091
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:30:02.496
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:30:02.546
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:30:13.357
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:30:13.563
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:30:15.697
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:30:40.954
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:30:44.980
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:31:57.205
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:33:21.403
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:33:25.035
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:33:35.591
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:34:03.270
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:34:06.242
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:34:28.412
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:34:38.650
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:34:39.772
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:34:40.124
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:34:44.739
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:35:04.459
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:35:04.834
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:35:05.189
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:35:07.597
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:35:09.769
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:35:16.957
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:35:30.007
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:35:36.882
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:35:37.117
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:35:38.145
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:35:38.505
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:35:38.715
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:38:01.407
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:38:20.200
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:38:23.856
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:38:25.529
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:38:26.686
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:38:32.336
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:38:36.001
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:38:46.153
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:38:48.188
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:38:48.260
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:38:50.361
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:39:43.558
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:39:49.351
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:39:49.690
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:39:50.174
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:40:02.221
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:40:05.383
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:40:06.262
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:40:07.080
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:40:08.172
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:40:09.435
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:40:09.769
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:40:11.359
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:41:19.089
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:41:20.235
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:41:20.309
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:41:22.353
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:42:19.481
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:42:19.881
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:42:31.468
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:42:32.334
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:42:39.553
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:42:43.612
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:42:45.054
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:42:45.232
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:42:46.862
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:43:16.953
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:43:17.176
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:43:18.789
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:43:38.957
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:43:40.597
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:43:41.978
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:43:44.385
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:43:44.745
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:43:46.791
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:43:47.133
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:43:59.702
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:44:00.045
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:44:02.772
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:44:04.008
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:44:07.697
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:44:08.043
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:44:08.898
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:44:11.959
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:44:11.984
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:44:13.546
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:44:19.680
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:44:23.057
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:44:25.994
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:44:53.221
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:44:53.564
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:44:55.823
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:44:59.117
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:45:02.448
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:45:08.579
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:45:08.920
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:45:12.084
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:45:12.404
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:45:15.992
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:45:16.335
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:45:20.445
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:45:20.773
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:45:22.539
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:45:22.851
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:45:27.883
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:45:28.320
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:45:29.262
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:45:29.272
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:45:29.512
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:45:31.092
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:45:32.678
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:45:33.022
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:45:36.928
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:45:37.288
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:45:38.053
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:45:39.194
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:45:42.019
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:45:42.355
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:45:43.351
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:45:46.398
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:45:46.492
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:45:48.070
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:45:48.604
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:45:48.987
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:45:49.557
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:45:49.897
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:46:04.401
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:46:04.798
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:46:07.953
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:46:08.799
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:46:09.945
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:46:09.989
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:46:12.058
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:46:27.554
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:46:44.322
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:46:46.560
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:46:46.980
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:46:54.589
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:47:08.176
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:47:12.348
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:47:16.430
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:47:16.813
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:47:23.524
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:47:27.232
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:47:30.900
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:47:32.095
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:47:33.281
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:47:35.568
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:47:39.374
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:47:39.761
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:47:40.740
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:47:43.426
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:47:45.590
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:47:47.286
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:47:48.467
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:47:49.732
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:47:50.129
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:47:52.631
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:47:55.820
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:47:57.126
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:47:57.445
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:47:59.054
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:48:16.031
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:48:16.415
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:48:18.102
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:48:18.480
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:48:18.916
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:48:19.282
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:48:31.256
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:48:39.465
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:48:42.667
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:48:47.046
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:48:47.325
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:48:48.952
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:49:08.635
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:49:09.491
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:49:09.752
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:49:11.364
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:49:23.980
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:49:24.971
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:49:26.569
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:49:27.004
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:49:31.426
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:49:31.798
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:49:32.585
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:49:32.955
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:49:37.940
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:49:37.994
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:49:40.107
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:49:42.302
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:49:42.731
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:49:42.913
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:49:43.314
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:49:47.013
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:49:47.382
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:49:49.419
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:49:50.575
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:49:50.685
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:49:52.691
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:50:15.977
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:50:16.945
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:50:17.359
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:50:19.136
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:50:24.823
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:50:28.524
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:50:31.179
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:50:33.356
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:50:34.542
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:50:36.197
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:50:37.871
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:50:40.029
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:50:47.183
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:50:47.261
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:50:49.289
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:51:11.164
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:51:11.187
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:51:13.252
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:52:01.268
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:52:10.487
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:52:12.304
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:52:12.734
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:52:13.655
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:52:16.959
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:52:17.387
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:52:24.834
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:52:28.538
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:52:46.959
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:52:47.303
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:52:49.711
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:52:50.488
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:52:50.828
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:52:55.851
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:52:57.434
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:52:57.718
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:52:59.521
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:53:00.994
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:53:04.668
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:53:05.015
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:53:05.674
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:53:07.807
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:53:09.934
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:53:10.265
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:53:11.416
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:53:14.956
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:53:15.020
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:53:16.624
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:53:23.278
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:53:24.639
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:53:24.902
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:53:26.490
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:53:28.473
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:53:28.776
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:54:20.157
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:54:21.313
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:54:23.445
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:54:25.431
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:54:48.088
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:54:48.177
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:54:50.178
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:55:35.160
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:55:35.509
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:55:48.858
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:55:52.497
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:56:00.462
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:56:00.593
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:56:02.179
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:56:48.881
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:56:50.013
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:56:51.165
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:56:52.418
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:56:52.753
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:56:54.343
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:57:37.661
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:57:38.003
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:57:39.550
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:57:42.684
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:57:45.339
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:57:47.997
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:57:49.001
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:57:49.109
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:57:50.695
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:58:35.578
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:58:37.778
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:58:38.167
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:58:38.769
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:58:39.156
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:58:43.926
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:58:44.679
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:58:45.617
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:58:46.108
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:58:46.892
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:58:47.326
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:58:47.738
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:58:49.165
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:58:49.561
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:58:54.338
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:58:54.722
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:58:59.090
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:59:00.752
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:59:01.610
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:59:01.888
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:59:03.506
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:59:19.692
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:59:22.341
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:59:22.414
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:59:24.439
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:59:56.054
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:59:56.099
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 22:59:58.214
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 23:00:12.073
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 23:00:12.460
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 23:00:23.102
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 23:00:23.443
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 23:01:14.446
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 23:01:14.868
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 23:08:26.307
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 23:08:26.678
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 23:08:30.863
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 23:08:32.528
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 23:08:34.221
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 23:08:37.885
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 23:08:37.942
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 23:08:40.013
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 23:11:12.839
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 23:11:15.978
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 23:11:18.396
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 23:11:19.521
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 23:11:24.044
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 23:11:24.119
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 23:11:25.728
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 23:12:11.216
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 23:12:11.567
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 23:12:45.509
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 23:12:45.822
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 23:12:47.497
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 23:12:47.819
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 23:12:58.427
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 23:12:58.770
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 23:13:14.952
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 23:13:16.074
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 23:13:16.111
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 23:13:18.160
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 23:13:51.872
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 23:13:54.038
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 23:13:54.906
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 23:13:55.165
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2014-10-15 23:13:57.266
+!MESSAGE error during type inferencing
+!STACK 0
+java.lang.NullPointerException

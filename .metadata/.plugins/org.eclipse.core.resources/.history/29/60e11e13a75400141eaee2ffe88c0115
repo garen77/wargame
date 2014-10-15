@@ -1,0 +1,119 @@
+
+var scene = null,
+	renderer = null,
+	stats = null,
+	cube = null,
+	camera = null,
+	sphere = null,
+	step=0,
+	controls = null; 
+
+var gui = null; 
+
+
+$(function () {
+	
+	
+	scene = new THREE.Scene();
+	camera = new THREE.PerspectiveCamera(45
+			, window.innerWidth / window.innerHeight
+			, 0.1, 1000);
+	
+	
+	
+
+	
+	
+	renderer = new THREE.WebGLRenderer();
+	renderer.setClearColorHex(0xEEEEEE,1.0);
+	renderer.setSize(window.innerWidth, window.innerHeight);
+//	var axes = new THREE.AxisHelper( 20 );
+	renderer.shadowMapEnabled = true;
+//	scene.add(axes);
+	var planeGeometry = new THREE.PlaneGeometry(60,40,1,1);
+	var planeMaterial = new THREE.MeshLambertMaterial(
+			{color: 0xffffff});
+	var plane = new THREE.Mesh(planeGeometry,planeMaterial);
+	plane.rotation.x=-0.5*Math.PI;
+	plane.position.x = 15;
+	plane.position.y = 0;
+	plane.position.z = 0;
+	plane.receiveShadow = true;
+	scene.add(plane);
+	
+	var ambientLight = new THREE.AmbientLight(0x0c0c0c);
+	scene.add(ambientLight);
+	
+	var spotLight = new THREE.SpotLight( 0xffffff );
+	spotLight.position.set( -40, 60, -10 );
+	spotLight.castShadow = true;
+	scene.add(spotLight);
+	
+	camera.position.x = -30;
+	camera.position.y = 40;
+	camera.position.z = 30;
+	camera.lookAt(scene.position);
+
+	controls = new function() {
+		this.addCube = function() {
+			var cubeSize = Math.ceil((Math.random() * 3));
+			var cubeGeometry = new
+			THREE.CubeGeometry(cubeSize,cubeSize,cubeSize);
+			var cubeMaterial = new THREE.MeshLambertMaterial(
+					{color: Math.random() * 0xffffff });
+			var cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
+			cube.castShadow = true;
+			cube.name = "cube-" + scene.children.length;
+			cube.position.x=-30 + Math.round(
+					(Math.random() * planeGeometry.width));
+			cube.position.y= Math.round((Math.random() * 5));
+			cube.position.z=-20 + Math.round((Math.random() *
+					planeGeometry.height));
+			scene.add(cube);
+			this.numberOfObjects = scene.children.length;
+			renderer.render(scene, camera);
+		};
+		this.removeCube = function() {
+			var allChildren = scene.children;
+			var lastObject = allChildren[allChildren.length-1];
+			if (lastObject instanceof THREE.Mesh) {
+				scene.remove(lastObject);
+				this.numberOfObjects = scene.children.length;
+			}		
+			renderer.render(scene, camera);
+		};
+	};
+	gui = new dat.GUI();
+		gui.add(controls, 'addCube',0,0.5);
+		gui.add(controls, 'removeCube',0,0.5);
+	$("#containerPlayArea").append(renderer.domElement);
+	
+	
+
+	renderer.render(scene, camera);
+	renderScene();
+
+
+});
+
+
+
+
+function initStats() {
+	var stats = new Stats();
+	stats.setMode(0);
+	stats.domElement.style.position = 'absolute';
+	stats.domElement.style.left = '0px';
+	stats.domElement.style.top = '0px';
+	$("#statusOutput").append( stats.domElement );
+	return stats;
+}
+
+function renderScene()
+{
+	
+	
+//	stats.update();
+	requestAnimationFrame(renderScene);
+	renderer.render(scene, camera);
+}

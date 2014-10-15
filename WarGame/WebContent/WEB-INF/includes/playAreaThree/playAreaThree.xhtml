@@ -11,7 +11,7 @@
 		<ice:inputHidden id="idCurrentUser" value="#{warGameLoaderBean.idCurrentUser}" />
 		<ice:panelGroup id="playAreaView" rendered="#{callerBean.viewState.view == 'playAreaStart'}">
 			<h1 id="playAreaTitle">Play Area 3d Three.js</h1>
-			<div id="statusOutput">Loading...</div>
+			<div id="statusOutput"></div>
 			<div id="containerPlayArea"></div>
 			<ice:panelGrid cellSpacing="0" columns="3" columnClasses="col1, col2, col3">
 				<ice:commandButton id="homeBack" type="submit" action="#{callerBean.back}" value="Back" />

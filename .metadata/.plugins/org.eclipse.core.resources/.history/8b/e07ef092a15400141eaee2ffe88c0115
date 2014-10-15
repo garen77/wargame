@@ -1,0 +1,71 @@
+
+var scene = null,
+	renderer = null,
+	stats = null,
+	cube = null,
+	camera = null,
+	sphere = null,
+	step=0,
+	controls = new function() {
+		this.rotationSpeed = 0.02;
+		this.bouncingSpeed = 0.03;
+		};
+
+var gui = new dat.GUI();
+		gui.add(controls, 'rotationSpeed',0,0.5);
+		gui.add(controls, 'bouncingSpeed',0,0.5);
+$(function () {
+	
+	
+	scene = new THREE.Scene();
+	camera = new THREE.PerspectiveCamera(45
+			, window.innerWidth / window.innerHeight
+			, 0.1, 1000);
+	renderer = new THREE.WebGLRenderer();
+	renderer.setClearColorHex(0xEEEEEE,1.0);
+	renderer.setSize(window.innerWidth, window.innerHeight);
+	var axes = new THREE.AxisHelper( 20 );
+	renderer.shadowMapEnabled = true;
+//	scene.add(axes);
+	var planeGeometry = new THREE.PlaneGeometry(60,40,1,1);
+	var planeMaterial = new THREE.MeshLambertMaterial(
+			{color: 0xffffff});
+	var plane = new THREE.Mesh(planeGeometry,planeMaterial);
+	scene.add(plane);
+	
+	var ambientLight = new THREE.AmbientLight(0x0c0c0c);
+	scene.add(ambientLight);
+	
+	var spotLight = new THREE.SpotLight( 0xffffff );
+	scene.add(spotLight);
+	
+	$("#containerPlayArea").append(renderer.domElement);
+	
+	
+	
+});
+
+function initStats() {
+	var stats = new Stats();
+	stats.setMode(0);
+	stats.domElement.style.position = 'absolute';
+	stats.domElement.style.left = '0px';
+	stats.domElement.style.top = '0px';
+	$("#statusOutput").append( stats.domElement );
+	return stats;
+}
+
+function renderScene()
+{
+	cube.rotation.x += controls.rotationSpeed;
+	cube.rotation.y += controls.rotationSpeed;
+	cube.rotation.z += controls.rotationSpeed;
+	
+	step+=controls.bouncingSpeed;
+	sphere.position.x = 20+( 10*(Math.cos(step)));
+	sphere.position.y = 2 +( 10*Math.abs(Math.sin(step)));
+	
+//	stats.update();
+	requestAnimationFrame(renderScene);
+	renderer.render(scene, camera);
+}
